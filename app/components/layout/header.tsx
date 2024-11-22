@@ -1,33 +1,27 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { client } from '../lib/contentful';
+import { Entry } from 'contentful';
 
+interface NavbarItem {
+  label: string;
+}
 
-export async function getStaticProps() {
-  const res = client.getEntries({content_type:'websiteNavbar'})
-  return {
-    props:{
-      navBar:(await res).items
-    }
+async function fetchNavbarItems() {
+  try {
+    const response = await client.getEntries({ content_type: 'websiteNavbar' });
+    
+    const menuItems = response.items[0]?.fields?.menuItems as string[];
+    
+    return menuItems || [];
+  } catch (error) {
+    console.error('Failed to fetch navbar items:', error);
+    return [];
   }
 }
 
-export const Header = () => {
-  const menuItems = [
-    {
-      label: "Let's Talk AI",
-      href: "https://appinventiv.com/artificial-intelligence/",
-    },
-    {
-      label: "About",
-      href: "https://appinventiv.com/about/"
-    },
-    {
-      label: "Services",
-      href: "https://appinventiv.com/service/"
-    }
-  ];
+export default async function Header() {
+  const menuItems = await fetchNavbarItems();
 
   return (
     <header className="header-container header-new nav-down">
@@ -58,20 +52,15 @@ export const Header = () => {
             <ul className="flex space-x-6">
               {menuItems.map((item, index) => (
                 <li key={index}>
-                  <Link href={item.href} className="nav-link">
-                    {item.label}
+                  <Link href="/" className="nav-link">
+                    {item}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link href="/contact" className="contact-btn btn_line btn-effect">
-                  CONTACT US
-                </Link>
-              </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
   );
-};
+}
