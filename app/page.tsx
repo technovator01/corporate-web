@@ -69,7 +69,7 @@ interface VideoEntry {
 }
 
 // VideoBanner component, typing props using VideoEntry
-export function VideoBanner({ videoEntry }: { videoEntry: VideoEntry }) {
+function VideoBanner({ videoEntry }: { videoEntry: VideoEntry }) {
   return (
     <div className="case_full_banner">
       <video
