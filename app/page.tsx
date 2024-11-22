@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { Footer } from './components/layout/footer';
 import Header from './components/layout/header';
 import { client } from './components/lib/contentful';
-import { Asset, Entry } from 'contentful';
+import { Asset } from 'contentful';
 
 interface HeadingEntry {
   title: string;

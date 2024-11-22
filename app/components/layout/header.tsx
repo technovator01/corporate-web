@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { client } from '../lib/contentful';
-import { Entry } from 'contentful';
 
-interface NavbarItem {
-  label: string;
-}
 
 async function fetchNavbarItems() {
   try {
