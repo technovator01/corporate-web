@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { Header } from './components/layout/header';
 import { Footer } from './components/layout/footer';
-import { createClient } from 'contentful';
 
 
 export default function AIServicesPage() {
