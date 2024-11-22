@@ -1,101 +1,207 @@
-import Image from "next/image";
+'use client'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { Header } from './components/layout/header';
+import { Footer } from './components/layout/footer';
+import { createClient } from 'contentful';
 
-export default function Home() {
+
+export default function AIServicesPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="portfolio_page scroll-container">
+      <Header />
+      
+      <main>
+        <div className="bg_lines"></div>
+        <div className="pin_spacers"></div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="top_head_wrap bg_wrapper">
+          <div className="container">
+            <div className="top_content_wrap">
+              <h1 id="ai-development-services" className="heading1">
+                AI Development Services
+              </h1>
+              
+              <div className="app__subhead">
+                Leverage our state-of-the-art custom AI services that 
+                automate mundane processes and strengthen business intelligence
+              </div>
+
+              <div className="common__btn hv_blue">
+                <a href="#" className="btn_line btn-effect btn--show-modal">
+                  Consult Our AI Experts
+                </a>
+              </div>
+            </div>
+
+            {/* Video Banner */}
+            <div className="case_full_banner">
+  <video
+    autoPlay
+    className="video-wrapper"
+    loop
+    muted
+    poster="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/chicago-banner.webp"
+  >
+    <source 
+      src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/ai-ml-new.mp4" 
+      type="video/mp4"
+    />
+    <source 
+      src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/ai-ml-new.ogg" 
+      type="video/ogg"
+    />
+  </video>
+</div>
+
+            {/* Client Logos */}
+            <div className="client_logos">
+              <div className="trusted_brands horizontal_line text-center">
+                Trusted by conglomerates, enterprises, and startups alike
+              </div>
+
+              <div className="client-logo-slider owl-carousel">
+                {['kfc', 'kpmg', 'dominos'].map((client) => (
+                  <div key={client} className="item">
+                    <Image 
+                      src={`https://appinventiv.com/wp-content/uploads/2024/01/${client}-logo.svg`} 
+                      alt={`${client} logo`} 
+                      width={100} 
+                      height={50} 
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
+
+        <AIServiceSection />
+        <CompanyStats />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      <Footer />
     </div>
   );
 }
+
+const AIServiceSection = () => {
+  const [activeTab, setActiveTab] = useState('1'); // Default active tab
+
+  const services = [
+    {
+      id: '1',
+      icon: 'https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/generative-ai.svg',
+      title: 'Generative AI',
+      description: 'As one of the top-rated AI software development companies, we have extensive experience in developing Generative AI solutions with advanced capabilities such as GPT4, GPT3, GPT 3.5, Midjourney, and DALL-E.'
+    },
+    {
+      id: '2',
+      icon: 'https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/generative-ai.svg',
+      title: 'ML Science',
+      description: 'As one of the top-rated AI software development companies, we have extensive experience in developing Machine Learning (ML) solutions including natural language processing (NLP), computer vision, and more.'
+    },
+    // Add other services if necessary
+  ];
+
+  return (
+    <section className="bg_wrapper">
+      <div className="container">
+        <h2 className="heading2">
+          Artificial Intelligence Development
+          <br />
+          Services We Offer
+        </h2>
+
+        <div className="app__subhead sub_para">
+          Our AI development services are known to unlock the potential of vast amounts of data for driving tangible business results.
+          <br />
+          Being a renowned AI solutions company, we specialize in leveraging the power of AI to transform raw data into actionable insights,
+          <br />
+          paving the way for operational efficiency and enhanced decision-making. Here are our reliably intelligent
+          <h3 className="heading_inline">AI services</h3>
+          that
+          <br />
+          can convert your vision into reality.
+        </div>
+
+        <div className="services_container">
+          {/* Left Section: Service List */}
+          <div className="services_lt">
+            <ul className="scroll_list" id="scroll_list">
+              {services.map(service => (
+                <li
+                  key={service.id}
+                  className={`tab-link ${activeTab === service.id ? 'current' : ''}`}
+                  onClick={() => setActiveTab(service.id)} // Update active tab on click
+                >
+                  <span data-tab={service.id}>
+                    <span className="scroll_list_num">
+                      {service.id}.
+                    </span>
+                    {service.title}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Section: Service Details */}
+          <div className="services_rt">
+            {services.map(service => (
+              <div
+                key={service.id}
+                id={service.id}
+                className={`tab-content ${activeTab === service.id ? 'current' : ''}`}
+                style={{ display: activeTab === service.id ? 'block' : 'none' }} // Only show the active tab content
+              >
+                <figure>
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={100}
+                    height={100}
+                    loading="lazy"
+                  />
+                </figure>
+                <div className="serv_card_head">{service.title}</div>
+                <p className="card_para">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+const CompanyStats = () => {
+  const stats = [
+    { value: '8+', label: 'Years of Experience' },
+    { value: '3000+', label: 'Successful Projects Delivered' },
+    { value: '1200+', label: 'Software Development Experts' },
+    { value: '25+', label: 'Countries Served' }
+  ];
+
+  return (
+    <section className="container">
+      <div className="stats_wrap pad_gap">
+        <div className="states_panel">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-item">
+              <div className="digits">{stat.value}</div>
+              <div className="stats-head">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="common__btn blk hv_blue">
+          <a href="#" className="btn_line btn-effect btn--show-modal">
+            Transform Your Business
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
