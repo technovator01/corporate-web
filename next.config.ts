@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
 // next.config.js
 module.exports = {
   images: {
-    domains: ['appinventiv.com', 'videos.ctfassets.net'],
+    domains: ['appinventiv.com', 'videos.ctfassets.net','images.ctfassets.net'],
   },
 };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { SectionHeading, SuccessStory } from '../shared/types';
 
 interface SuccessStoriesProps {

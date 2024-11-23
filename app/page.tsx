@@ -3,7 +3,6 @@ import LandingPage from './components/sections/LandingPage';
 import SectionLoader from './components/sections/SectionLoader';
 import AIServiceSection from './components/sections/AIServiceSection';
 import { getData } from './components/api/getLandingPageData';
-import { PageData } from './components/shared/types';
 import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
 import FourthSection from './components/sections/FourthSection';

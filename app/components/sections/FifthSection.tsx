@@ -63,27 +63,4 @@ const CTASection: React.FC<CTASectionProps> = ({ data = defaultCTAData }) => {
   );
 };
 
-// Example usage in a page or another component
-const ExamplePage = () => {
-  // Custom data example
-  const customCTAData = {
-    ...defaultCTAData,
-    heading: "Custom heading here",
-    buttonAction: () => {
-      // Custom action
-      console.log('Custom action');
-    }
-  };
-
-  return (
-    <div>
-      {/* Using default data */}
-      <CTASection />
-      
-      {/* Using custom data */}
-      <CTASection data={customCTAData} />
-    </div>
-  );
-};
-
 export default CTASection;

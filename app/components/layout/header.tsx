@@ -27,14 +27,14 @@ export default async function Header() {
           <div className="brand_logo">
             <Link href="https://appinventiv.com">
               <Image
-                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/images/appi-blue-blk-logo.svg"
+                src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"
                 alt="Appinventiv logo"
                 width={150}
                 height={50}
                 className="appi-blue-blk-logo"
               />
               <Image
-                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/images/appi-blue-wht-logo.svg"
+                src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"
                 alt="Appinventiv white logo"
                 width={150}
                 height={50}
