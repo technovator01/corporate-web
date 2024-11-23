@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import { Asset } from "contentful";
 import { client } from "../lib/contentful";
 import Image from 'next/image';
+import { getData } from '../api/getLandingPageData';
 
 // Interfaces
 interface LandingPageProps {
@@ -10,44 +11,6 @@ interface LandingPageProps {
   videoUrl: string;
 }
 
-interface VideoEntry {
-  videoUrl: string;
-}
-
-async function getData() {
-    try {
-      const headingResponse = await client.getEntries({ content_type: 'heading' });
-      const videoResponse = await client.getEntries<any>({ content_type: 'landingVideo' });
-      let title = '';
-      const headingFields = headingResponse.items[0]?.fields;
-
-    if (typeof headingFields?.title === 'object' && headingFields.title !== null) {
-      const titleObj = headingFields.title as any;
-      title = titleObj.content?.[0]?.content?.[0]?.value || '';
-    }
-    
-    const subtitle = headingFields?.subtitle as string || '';
-
-    // Fetch video content
-    const videoAsset = (videoResponse.items[0].fields.video as Asset[])[0];
-    const videoUrl = videoAsset?.fields?.file?.url
-      ? `https:${videoAsset.fields.file.url}`
-      : '';
-
-    return {
-        title,
-        subtitle,
-        videoUrl
-      };
-    } catch (error) {
-      console.error('Failed to fetch content:', error);
-      return {
-        title: '',
-        subtitle: '',
-        videoUrl: ''
-      };
-    }
-  }
 
 // Main Component
 export default async function LandingPage() {

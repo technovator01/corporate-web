@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "contentful": "^11.2.3",
+    "jquery": "^3.7.1",
     "next": "15.0.3",
+    "owl.carousel": "^2.3.4",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.32",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
