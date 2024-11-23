@@ -1,151 +1,22 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Image from 'next/image';
-import { Footer } from './components/layout/footer';
-import Header from './components/layout/header';
-import { client } from './components/lib/contentful';
-import { Asset } from 'contentful';
-
-interface HeadingEntry {
-  title: string;
-  subtitle: string;
-}
-
-async function fetchHeadingContent(): Promise<HeadingEntry> {
-  try {
-    const response = await client.getEntries({ content_type: 'heading' });
-    // Extract first entry
-    const firstEntry = response.items[0];
-    
-    // Extract fields
-    const fields = firstEntry?.fields;
-    
-    // Handle title extraction
-    let title = '';
-    if (typeof fields?.title === 'object' && fields.title !== null) {
-      const titleObj = fields.title as any;
-      title = titleObj.content?.[0]?.content?.[0]?.value || '';
-    }
-    
-    // Extract subtitle
-    const subtitle = fields?.subtitle as string || '';
-
-    return {
-      title,
-      subtitle
-    };
-  } catch (error) {
-    console.error('Failed to fetch heading content:', error);
-    return {
-      title: '',
-      subtitle: ''
-    };
-  }
-}
-async function fetchLandingVideoContent(): Promise<VideoEntry> {
-  try {
-    const response = await client.getEntries<any>({ content_type: 'landingVideo' });
-    
-    // Type assertion to handle Contentful's complex typing
-    const videoAsset = (response.items[0].fields.video as Asset[])[0];
-    
-    const videoUrl = videoAsset?.fields?.file?.url
-      ? `https:${videoAsset.fields.file.url}`
-      : '';
-
-    return {
-      videoUrl
-    };
-  } catch (error) {
-    console.error('Failed to fetch landing video content:', error);
-    return {
-      videoUrl: ''
-    };
-  }
-}
-
-// Declare the interface outside the component
-interface VideoEntry {
-  videoUrl: string;
-}
-
-// VideoBanner component, typing props using VideoEntry
-function VideoBanner({ videoEntry }: { videoEntry: VideoEntry }) {
-  return (
-    <div className="case_full_banner">
-      <video
-        autoPlay
-        className="video-wrapper"
-        loop
-        muted
-        poster="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/chicago-banner.webp"
-      >
-        {/* Use videoEntry.videoUrl to access the URL */}
-        <source src={videoEntry.videoUrl} type="video/mp4" />
-      </video>
-    </div>
-  );
-}
+import LandingPage from './components/sections/LandingPage';
+import SectionLoader from './components/sections/SectionLoader';
 
 export default async function AIServicesPage() {
-  const { title, subtitle } = await fetchHeadingContent();
-  const videoUri= await fetchLandingVideoContent();
   return (
     <div className="portfolio_page scroll-container">
-
-      <Header />
 
       <main>
         <div className="bg_lines"></div>
         <div className="pin_spacers"></div>
 
-        <div className="top_head_wrap bg_wrapper">
-          <div className="container">
-            <div className="top_content_wrap">
-              <h1 id="ai-development-services" className="heading1">
-              {title}
-              </h1>
-
-              <div className="app__subhead">
-                {subtitle}
-              </div>
-
-              <div className="common__btn hv_blue">
-                <a href="#" className="btn_line btn-effect btn--show-modal">
-                  Consult Our AI Experts
-                </a>
-              </div>
-            </div>
-
-            {/* Video Banner */}
-            <VideoBanner videoEntry={videoUri} /> 
-
-            {/* Client Logos */}
-            <div className="client_logos">
-              <div className="trusted_brands horizontal_line text-center">
-                Trusted by conglomerates, enterprises, and startups alike
-              </div>
-
-              <div className="client-logo-slider owl-carousel">
-                {['kfc', 'kpmg', 'dominos'].map((client) => (
-                  <div key={client} className="item">
-                    <Image 
-                      src={`https://appinventiv.com/wp-content/uploads/2024/01/${client}-logo.svg`} 
-                      alt={`${client} logo`} 
-                      width={100} 
-                      height={50} 
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <Suspense fallback={<SectionLoader />}>
+          <LandingPage />
+        </Suspense>
         {/* <AIServiceSection /> */}
         <CompanyStats />
       </main>
-
-      <Footer />
     </div>
   );
 }
