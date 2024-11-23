@@ -11,6 +11,9 @@ import SuccessStories, { successStoriesData } from './components/sections/SixthS
 import TestimonialPanel, { sampleData } from './components/sections/SeventhSection';
 import CustomApproachAI, { processCards, techStacks } from './components/sections/EightSection';
 import Recognition, { recognitionsData } from './components/sections/NinthSection';
+import Blogs from './components/sections/TwelthSection';
+import FAQs from './components/sections/Eleventh';
+import ConsultationForm from './components/sections/TenthSection';
 
 export default async function AIServicesPage() {
     const { services  } = await getData();
@@ -40,6 +43,9 @@ export default async function AIServicesPage() {
       />
         <CustomApproachAI processCards={processCards} techStacks={techStacks} />
         <Recognition {...recognitionsData} />
+        {/* <ConsultationForm/> */}
+        <FAQs />
+        <Blogs/>
             </main>
         </div>
     );
