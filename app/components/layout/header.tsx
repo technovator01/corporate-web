@@ -57,11 +57,18 @@ export default function Header({ items }: menuItems) {
 
       <div className="mobile-menu">
     <div id="mob-header">
-     <div className="mobile-logo">
-      <a href="https://appinventiv.com/">
-       <img alt="Appinventiv - logo" className="appinventiv-mob-wht-logo" src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"/>
-      </a>
-     </div>
+    <div className="mobile-logo">
+  <a href="/">
+    <img 
+      alt="Appinventiv - logo" 
+      className="appinventiv-mob-wht-logo" 
+      src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
+      width="100" 
+      height="20" 
+    />
+  </a>
+</div>
+
      <div className="nav__list common__btn mobile__btn">
       <a className="btn-effect btn--show-modal" href="" onClick={toggleMenu}>
        Contact Us
@@ -77,11 +84,18 @@ export default function Header({ items }: menuItems) {
      </div>
     </div>
     <div id="mobile-menu" className={`${isMenuOpen ? 'open' : ''}`}>
-     <div className="mobile-logo">
-      <a className="appinventiv-mob-blk-logo" href="https://appinventiv.com/">
-       <img alt="Appinventiv - logo" src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"/>
-      </a>
-     </div>
+    <div className="mobile-logo">
+  <a href="/">
+    <img 
+      alt="Appinventiv - logo" 
+      className="appinventiv-mob-wht-logo" 
+      src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
+      width="50" 
+      height="20" 
+    />
+  </a>
+</div>
+
      <div className="main-nav">
       <ul>
        <li>

@@ -32,10 +32,10 @@ export default async function AIServicesPage() {
                 <ThirdSection/>
                 <FourthSection/>
                 <CTASection />
-                <SuccessStories
+                {/* <SuccessStories
         heading={successStoriesData.heading}
         stories={successStoriesData.stories}
-      />
+      /> */}
           <TestimonialPanel 
         heading={sampleData.heading}
         testimonials={sampleData.testimonials}
