@@ -48,3 +48,17 @@ export async function getData() {
         };
     }
 }
+
+
+export async function fetchNavbarItems() {
+    try {
+      const response = await client.getEntries({ content_type: 'websiteNavbar' });
+  
+      const menuItems = response.items[0]?.fields?.menuItems as string[];
+  
+      return menuItems || [];
+    } catch (error) {
+      console.error('Failed to fetch navbar items:', error);
+      return [];
+    }
+  }

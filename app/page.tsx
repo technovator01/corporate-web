@@ -13,7 +13,6 @@ import CustomApproachAI, { processCards, techStacks } from './components/section
 import Recognition, { recognitionsData } from './components/sections/NinthSection';
 import Blogs from './components/sections/TwelthSection';
 import FAQs from './components/sections/Eleventh';
-import ConsultationForm from './components/sections/TenthSection';
 
 export default async function AIServicesPage() {
     const { services  } = await getData();
@@ -33,7 +32,7 @@ export default async function AIServicesPage() {
                 <ThirdSection/>
                 <FourthSection/>
                 <CTASection />
-                <SuccessStories 
+                <SuccessStories
         heading={successStoriesData.heading}
         stories={successStoriesData.stories}
       />

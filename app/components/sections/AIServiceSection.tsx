@@ -15,7 +15,6 @@ interface AIServiceSectionProps {
 
 const AIServiceSection = ({ services }: AIServiceSectionProps) => {
     const [activeTab, setActiveTab] = useState(services[0]?.id || ''); // Default to first service
-    console.log(services);
     return (
         <section className="bg_wrapper">
             <div className="container">
