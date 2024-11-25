@@ -16,7 +16,7 @@ import { SuccessStoriesProps, SuccessStoriesWrapper } from './components/section
 import TestimonialPanel from './components/sections/SeventhSection';
 
 
-export const successStoriesData: SuccessStoriesProps = {
+const successStoriesData: SuccessStoriesProps = {
   heading: {
     title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
     beforeHighlight: "Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an ",
