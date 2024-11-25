@@ -97,55 +97,15 @@ export default function Header({ items }: menuItems) {
 </div>
 
      <div className="main-nav">
-      <ul>
-       <li>
-        <div className="accord-wrap">
-         <a href="https://appinventiv.com/about/">
-          About
-         </a>
-         <span>
-         </span>
-        </div>
-      
-       </li>
-       <li>
-        <div className="accord-wrap">
-         <a href="https://appinventiv.com/industries/">
-          Industries
-         </a>
-         <span>
-         </span>
-        </div>
-
-       </li>
-       <li>
-        <div className="accord-wrap">
-         <a href="https://appinventiv.com/service/">
-          Services
-         </a>
-         <span>
-         </span>
-        </div>
-
-       </li>
-       <li>
-        <div className="accord-wrap">
-         <a href="https://appinventiv.com/portfolio/">
-          Portfolio
-         </a>
-         <span>
-         </span>
-        </div>
-
-       </li>
-       <li>
-        <div className="accord-wrap">
-         <a href="https://appinventiv.com/blog/">
-          Resources
-         </a>
-        </div>
-       </li>
-      </ul>
+      <ul className="accord-wrap">
+              {items.map((item, index) => (
+                <li key={index}>
+                  <Link href="/" className="nav-link">
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
       <div className="menu-btn-wrapper menu-wrapper">
        <ul>
         <li className="nav_contact btn_effect">
