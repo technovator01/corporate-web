@@ -40,7 +40,7 @@ const CustomApproachAI: React.FC<Props> = ({ processCards, techStacks }) => {
           </div>
           <div className="service_panel">
             <div className="process_slider has-buttons owl-carousel">
-              {processCards.map((card, index) => (
+              {processCards.map((card, index) => (  
                 <div className="item" key={index}>
                   <div className="process_card">
                     <div className="prcess__num">{card.number}</div>

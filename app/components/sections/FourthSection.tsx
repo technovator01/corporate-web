@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-
+import Image from 'next/image';
 interface IndustryItem {
     link: string;
     image: string;
@@ -69,13 +69,10 @@ const tabsData = [
     {
       id: "tab4",
       title: "Strong R & D Expertise",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Strong-R & D-Expertise.webp",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Security-First-Approach.webp",
       content: "As a dedicated AI app development services company, our R&D endeavors are capable of streamlining business processes and effective in reducing marginal costs and increasing marginal productivity."
     }
-  ];    
-  
-  
-  
+  ];
 
   const IndustriesGrid = () => {
     // Function to chunk array into groups of 4
@@ -154,13 +151,13 @@ const FourthSection = () => {
               src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/ellipse1.webp"
             />
           </div>
-          <div className="ellipse2">
+          {/* <div className="ellipse2">
             <img 
               alt="ellipse" 
               className="desktop" 
               src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/ellipse2.webp"
             />
-          </div>
+          </div> */}
 
           <h2 className="heading2">
             Why Choose Us as Your Artificial<br/>
@@ -180,7 +177,9 @@ const FourthSection = () => {
             <div className="ds_flex flex_spc_btw">
               <div className="tab__head_panel">
                 <ul>
-                  {tabsData.map((tab) => (
+                  {tabsData.map((tab) => {
+                    console.log(tab);
+                    return (
                     <li 
                       key={tab.id} 
                       className={`tab-link-wrapper ${activeTab === tab.id ? 'active' : ''}`}
@@ -188,7 +187,8 @@ const FourthSection = () => {
                     >
                       <span rel={tab.id}>{tab.title}</span>
                     </li>
-                  ))}
+                  )}
+                  )}
                 </ul>
               </div>
 
@@ -196,17 +196,19 @@ const FourthSection = () => {
                 {tabsData.map((tab) => (
                   <div 
                     key={tab.id}
-                    className={`tab-detail ${activeTab === tab.id ? 'block' : ''}`} 
+                    className={`tab-detail${activeTab === tab.id ? 'block' : ''}`} 
                     id={tab.id}
                   >
                     <div className="tab_detl_inner ds_flex flex_spc_btw flex_al_start">
                       <div className="tab_img_wrap">
                         <figure>
-                          <img 
-                            src={tab.image} 
-                            alt="machine learning development company" 
-                            loading="lazy"
-                          />
+                        <Image 
+    src={tab.image} 
+    alt="machine learning development company" 
+    width={500} // Adjust the width based on your image
+    height={300} // Adjust the height based on your image
+    loading="lazy"
+  />
                         </figure>
                       </div>
                       <p className="para">{tab.content}</p>
