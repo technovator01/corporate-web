@@ -66,7 +66,7 @@ const successStoriesData = {
     ]
   };
 
-  export const sampleData = {
+const sampleData = {
     heading: {
       main: "What Our Clients Have<br/>to Say for Us",
       subHeadBefore: "As a bespoke ",
