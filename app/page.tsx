@@ -12,60 +12,59 @@ import Recognition, { recognitionsData } from './components/sections/NinthSectio
 import Blogs from './components/sections/TwelthSection';
 import FAQs from './components/sections/Eleventh';
 import dynamic from 'next/dynamic';
-import { SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
+import { SuccessStoriesProps, SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
 import TestimonialPanel from './components/sections/SeventhSection';
 
 
-const successStoriesData = {
-    heading: {
-      title: "How Our Clients Leverage AI to<br/>Innovate Instantly and Flourish Globally",
-      beforeHighlight: "Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an ",
-      highlight: "AI software<br/>development company",
-      afterHighlight: "that speak volumes and guarantee maximum ROI."
+export const successStoriesData: SuccessStoriesProps = {
+  heading: {
+    title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
+    beforeHighlight: "Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an ",
+    highlight: "AI software development company",
+    afterHighlight: "that speak volumes and guarantee maximum ROI."
+  },
+  stories: [
+    {
+      logo: {
+        type: "image",
+        content: '/images/jobget-port-logo.svg'
+      },
+      description: 'As a trusted provider of mobile app development service, we made the employment landscape easy and accessible for blue-collar workers with the help of a dedicated employment portal.',
+      result: {
+        value: '$52 Million',
+        description: 'in Series B Funding'
+      },
+      link: '/portfolio/jobget-job-search-app',
+      imageClass: 'img1'
     },
-    stories: [
-      {
-        logo: {
-          type: 'image',
-          content: '/images/jobget-port-logo.svg'
-        },
-        description: 'As a trusted provider of <a href="/mobile-app-development">mobile app development service</a>, we made the employment landscape easy and accessible<br/>for blue-collar workers with the help of a dedicated<br/>employment portal.',
-        result: {
-          value: '$52 Million',
-          description: 'in Series B Funding'
-        },
-        link: '/portfolio/jobget-job-search-app',
-        imageClass: 'img1'
+    {
+      logo: {
+        type: "image",
+        content: '/images/ikea-logo.svg'
       },
-      {
-        logo: {
-          type: 'image',
-          content: '/images/ikea-logo.svg'
-        },
-        description: 'Developed an innovative AI-powered solution for automated<br/>furniture recognition and placement visualization.',
-        result: {
-          value: '40% Increase',
-          description: 'in Customer Engagement'
-        },
-        link: '/portfolio/ikea-ar-solution',
-        imageClass: 'img2'
+      description: 'Developed an innovative AI-powered solution for automated furniture recognition and placement visualization.',
+      result: {
+        value: '40% Increase',
+        description: 'in Customer Engagement'
       },
-      {
-        logo: {
-          type: 'text',
-          content: 'TechStart'
-        },
-        description: 'Built a scalable machine learning platform for predictive<br/>analytics and real-time decision making.',
-        result: {
-          value: '3x Growth',
-          description: 'in Processing Efficiency'
-        },
-        link: '/portfolio/techstart-ml-platform',
-        imageClass: 'img3'
-      }
-    ]
-  };
-
+      link: '/portfolio/ikea-ar-solution',
+      imageClass: 'img2'
+    },
+    {
+      logo: {
+        type: "text",
+        content: 'TechStart'
+      },
+      description: 'Built a scalable machine learning platform for predictive analytics and real-time decision making.',
+      result: {
+        value: '3x Growth',
+        description: 'in Processing Efficiency'
+      },
+      link: '/portfolio/techstart-ml-platform',
+      imageClass: 'img3'
+    }
+  ]
+};
 const sampleData = {
     heading: {
       main: "What Our Clients Have<br/>to Say for Us",
