@@ -23,14 +23,14 @@ export default function Header({ items }: menuItems) {
           <div className="brand_logo">
             <Link href="https://appinventiv.com">
               <Image
-                src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"
+                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
                 alt="Appinventiv logo"
                 width={150}
                 height={50}
                 className="appi-blue-blk-logo"
               />
               <Image
-                src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png"
+                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
                 alt="Appinventiv white logo"
                 width={150}
                 height={50}

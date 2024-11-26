@@ -1,51 +1,62 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
+
+interface ParsedData {
+  industrySection: IndustrySection;
+  whyChooseUs: WhyChooseUs;
+}
+
 interface IndustryItem {
     link: string;
     image: string;
-    alt: string;
     title: string;
   }
+
+interface IndustrySection{
+  heading:string,
+  subheading:string,
+  item:IndustryItem[]
+}
+
+interface WhyChooseUs{
+  heading:string,
+  subheading:string,
+  item:TabItem[]
+}
+
+interface TabItem{
+  id:string,
+  title:string,
+  image:string,
+  content:string
+}
 
 // Modified industries data without static grid classes
 const industriesData: IndustryItem[] = [
     {
       link: "https://appinventiv.com/healthcare-software-development/",
       image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/healthcare-indus.svg",
-      alt: "healthcare custom software development",
       title: "Healthcare"
     },
     {
       link: "https://appinventiv.com/social-media-app-development/",
       image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/social-networking-indus.svg",
-      alt: "social networking custom software development",
       title: "Social Networking"
     },
     {
       link: "https://appinventiv.com/education-app-development/",
       image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/education-indus.svg",
-      alt: "education software developers",
       title: "Education"
     },
     {
       link: "https://appinventiv.com/manufacturing-it-services/",
       image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/manufacture.svg",
-      alt: "Manufacturing in AI",
       title: "Manufacturing"
-    },   {
-        link: "https://appinventiv.com/manufacturing-it-services/",
-        image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/manufacture.svg",
-        alt: "Manufacturing in AI",
-        title: "Manufacturing"
-      },   {
-        link: "https://appinventiv.com/manufacturing-it-services/",
-        image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/manufacture.svg",
-        alt: "Manufacturing in AI",
-        title: "Manufacturing"
-      },
+    }
     // Add more items as needed...
   ];
+
 // Data for tabs
 const tabsData = [
     {
@@ -95,7 +106,7 @@ const tabsData = [
             <li key={itemIndex} className="grid_colm_item">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <figure>
-                  <img src={item.image} alt={item.alt} loading="lazy" />
+                  <img src={item.image} loading="lazy" />
                 </figure>
                 <div className="grid_colm_head">{item.title}</div>
               </a>
