@@ -27,7 +27,7 @@ const ThirdSection = ({ title, subtitle, cards }: AiServiceSection) => {
 
         <div className="grid_col3">
           {cards.map((service) => (
-            <div className="tech_card">
+            <div key="1" className="tech_card">
               <figure>
                 <img 
                   src={service.imageUrl}
