@@ -2,8 +2,9 @@
 import { Asset } from "contentful";
 import { client } from "../lib/contentful";
 import { SectionHeading, SuccessStoriesProps, SuccessStory } from "../sections/SuccessStoriesClientWraper";
-import { error } from "console";
+import { error, log } from "console";
 import { Recognition } from "../sections/NinthSection";
+import { FAQ, FAQSection } from "../sections/Eleventh";
 
 export async function getData() {
     try {
@@ -166,6 +167,38 @@ export async function getRecognitions(): Promise<Recognition> {
         throw error;
     }
 }
+
+  export async function getFAQ(): Promise<{ heading: string; faqs: FAQ[] }> {
+    try {
+      const FAQResponse = await client.getEntries({
+        content_type: 'faqPage',
+        limit: 1,
+      });
+  
+      // Extract fields from the first item
+      const fields = FAQResponse.items[0]?.fields;
+  
+      if (!fields) {
+        throw new Error('No FAQ data found');
+      }
+  
+      // Validate heading
+      const heading: string = typeof fields.heading === 'string' ? fields.heading : 'Frequently Asked Questions';
+  
+      // Validate and extract FAQs
+      const faqs: FAQ[] = Array.isArray(fields.faqs)
+        ? fields.faqs.map((faq: any) => ({
+            question: typeof faq.fields?.question === 'string' ? faq.fields.question : '',
+            answer: typeof faq.fields?.answer === 'string' ? faq.fields.answer : '',
+          }))
+        : [];
+  
+      return { heading, faqs };
+    } catch (error) {
+      console.error('Error fetching FAQs:', error);
+      return { heading: '', faqs: [] };
+    }
+  }
 
 export async function fetchNavbarItems() {
     try {

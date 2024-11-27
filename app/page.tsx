@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import LandingPage from './components/sections/LandingPage';
 import SectionLoader from './components/sections/SectionLoader';
 import AIServiceSection from './components/sections/AIServiceSection';
-import { getAIData, getData, getRecognitions, getSuccessStories } from './components/api/getLandingPageData';
+import { getAIData, getData, getFAQ, getRecognitions, getSuccessStories } from './components/api/getLandingPageData';
 import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
 import FourthSection from './components/sections/FourthSection';
@@ -10,7 +10,7 @@ import CTASection from './components/sections/FifthSection';
 import Recognition from './components/sections/NinthSection';
 import Blogs from './components/sections/TwelthSection';
 import FAQs from './components/sections/Eleventh';
-import { SuccessStoriesProps, SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
+import {SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
 import TestimonialPanel from './components/sections/SeventhSection';
 
 // const successStoriesData: SuccessStoriesProps = {
@@ -92,6 +92,10 @@ export default async function AIServicesPage() {
     const successStoriesData  = await getSuccessStories();
     const {title, subtitle, cards} = await getAIData();
     const recognitionsData = await getRecognitions();
+    const { heading, faqs } = await getFAQ();
+    console.log(heading);
+    console.log(faqs);
+
     return (
         <div className="portfolio_page scroll-container">
             <main>
@@ -121,7 +125,7 @@ export default async function AIServicesPage() {
         {/* <CustomApproachAI processCards={processCards} techStacks={techStacks} /> */}
         <Recognition {...recognitionsData} />
         {/* <ConsultationForm/> */}
-        <FAQs />
+        <FAQs faqs={faqs} heading={heading}/>
         <Blogs/>
             </main>
         </div>
