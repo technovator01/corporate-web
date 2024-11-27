@@ -2,12 +2,12 @@ import React, { Suspense } from 'react';
 import LandingPage from './components/sections/LandingPage';
 import SectionLoader from './components/sections/SectionLoader';
 import AIServiceSection from './components/sections/AIServiceSection';
-import { getAIData, getData, getSuccessStories } from './components/api/getLandingPageData';
+import { getAIData, getData, getRecognitions, getSuccessStories } from './components/api/getLandingPageData';
 import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
 import FourthSection from './components/sections/FourthSection';
 import CTASection from './components/sections/FifthSection';
-import Recognition, { recognitionsData } from './components/sections/NinthSection';
+import Recognition from './components/sections/NinthSection';
 import Blogs from './components/sections/TwelthSection';
 import FAQs from './components/sections/Eleventh';
 import { SuccessStoriesProps, SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
@@ -91,6 +91,7 @@ export default async function AIServicesPage() {
     const { services  } = await getData();
     const successStoriesData  = await getSuccessStories();
     const {title, subtitle, cards} = await getAIData();
+    const recognitionsData = await getRecognitions();
     return (
         <div className="portfolio_page scroll-container">
             <main>
