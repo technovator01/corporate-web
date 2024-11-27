@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
-import { SectionHeading, SuccessStory } from '../shared/types';
-
+import { SectionHeading, SuccessStory } from './SuccessStoriesClientWraper';
+import Image from 'next/image';
 interface SuccessStoriesProps {
   heading: SectionHeading;
   stories: SuccessStory[];
@@ -98,9 +98,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
     console.error('Missing required props at render');
     return null;
   }
-
-  console.log('Rendering SuccessStories component');
-
+  console.log(stories);
   return (
     <section className="success_stories_wrapper" style={{ minHeight: '100vh' }}>
       <div className="bg_wrapper">
@@ -109,11 +107,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
             {renderTitleLines(heading.title)}
           </h2>
           <div className="app__subhead text-center">
-            {heading.beforeHighlight}
-            <h3 className="heading_inline">
-              {heading.highlight}
-            </h3>
-            {heading.afterHighlight}
+            {heading.subtitle}
           </div>
         </div>
         {/* Change here for scroll View Adjustments */}
@@ -133,13 +127,15 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
                     <div className="port__left">
                       <div className="port_logo">
                         {story.logo?.type === 'image' ? (
-                          <figure>
-                            <img 
-                              src={story.logo.content}
-                              alt="client logo"
-                              loading="lazy"
-                            />
-                          </figure>
+                         <Image 
+                         src={story.logo.content}
+                         alt="client logo"
+                         width={100}  // Specify an appropriate width
+                         height={100} // Specify an appropriate height
+                         loading="lazy"
+                         objectFit="contain" // Or "cover" depending on your design
+                         className="logo-image" // Optional: add a class for styling
+                       />
                         ) : (
                           <h4 className="heading2">{story.logo?.content}</h4>
                         )}
@@ -174,7 +170,14 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
                         </a>
                       </div>
                     </div>
-                    <div className={`port__rght ${story.imageClass}`}></div>
+                    <div 
+  className={`port__rght`}
+  style={{
+    background: `url(${story.image}) no-repeat`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover'
+  }}
+></div>
                   </div>
                 </div>
               </section>

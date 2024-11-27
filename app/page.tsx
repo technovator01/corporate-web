@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import LandingPage from './components/sections/LandingPage';
 import SectionLoader from './components/sections/SectionLoader';
 import AIServiceSection from './components/sections/AIServiceSection';
-import { getAIData, getData } from './components/api/getLandingPageData';
+import { getAIData, getData, getSuccessStories } from './components/api/getLandingPageData';
 import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
 import FourthSection from './components/sections/FourthSection';
@@ -13,55 +13,53 @@ import FAQs from './components/sections/Eleventh';
 import { SuccessStoriesProps, SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
 import TestimonialPanel from './components/sections/SeventhSection';
 
-const successStoriesData: SuccessStoriesProps = {
-  heading: {
-    title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
-    beforeHighlight: "Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an ",
-    highlight: "AI software development company",
-    afterHighlight: "that speak volumes and guarantee maximum ROI."
-  },
-  stories: [
-    {
-      logo: {
-        type: "image",
-        content: '/images/jobget-port-logo.svg'
-      },
-      description: 'As a trusted provider of mobile app development service, we made the employment landscape easy and accessible for blue-collar workers with the help of a dedicated employment portal.',
-      result: {
-        value: '$52 Million',
-        description: 'in Series B Funding'
-      },
-      link: '/portfolio/jobget-job-search-app',
-      imageClass: 'img1'
-    },
-    {
-      logo: {
-        type: "image",
-        content: '/images/ikea-logo.svg'
-      },
-      description: 'Developed an innovative AI-powered solution for automated furniture recognition and placement visualization.',
-      result: {
-        value: '40% Increase',
-        description: 'in Customer Engagement'
-      },
-      link: '/portfolio/ikea-ar-solution',
-      imageClass: 'img2'
-    },
-    {
-      logo: {
-        type: "text",
-        content: 'TechStart'
-      },
-      description: 'Built a scalable machine learning platform for predictive analytics and real-time decision making.',
-      result: {
-        value: '3x Growth',
-        description: 'in Processing Efficiency'
-      },
-      link: '/portfolio/techstart-ml-platform',
-      imageClass: 'img3'
-    }
-  ]
-};
+// const successStoriesData: SuccessStoriesProps = {
+//   heading: {
+//     title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
+//     subtitle:"Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an that speak volumes and guarantee maximum ROI."
+//   },
+//   stories: [
+//     {
+//       logo: {
+//         type: "image",
+//         content: '/images/jobget-port-logo.svg'
+//       },
+//       description: 'As a trusted provider of mobile app development service, we made the employment landscape easy and accessible for blue-collar workers with the help of a dedicated employment portal.',
+//       result: {
+//         value: '$52 Million',
+//         description: 'in Series B Funding'
+//       },
+//       link: '/portfolio/jobget-job-search-app',
+//       image: ''
+//     },
+//     {
+//       logo: {
+//         type: "image",
+//         content: '/images/ikea-logo.svg'
+//       },
+//       description: 'Developed an innovative AI-powered solution for automated furniture recognition and placement visualization.',
+//       result: {
+//         value: '40% Increase',
+//         description: 'in Customer Engagement'
+//       },
+//       link: '/portfolio/ikea-ar-solution',
+//       image: ''
+//     },
+//     {
+//       logo: {
+//         type: "text",
+//         content: 'TechStart'
+//       },
+//       description: 'Built a scalable machine learning platform for predictive analytics and real-time decision making.',
+//       result: {
+//         value: '3x Growth',
+//         description: 'in Processing Efficiency'
+//       },
+//       link: '/portfolio/techstart-ml-platform',
+//       image: ''
+//     }
+//   ]
+// };
 const sampleData = {
     heading: {
       main: "What Our Clients Have<br/>to Say for Us",
@@ -91,6 +89,7 @@ const sampleData = {
 
 export default async function AIServicesPage() {
     const { services  } = await getData();
+    const successStoriesData  = await getSuccessStories();
     const {title, subtitle, cards} = await getAIData();
     return (
         <div className="portfolio_page scroll-container">

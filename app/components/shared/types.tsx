@@ -43,7 +43,5 @@ export interface SuccessStory {
   
   export interface SectionHeading {
     title: string;
-    beforeHighlight: string;
-    highlight: string;
-    afterHighlight: string;
+    subtitle:string
   }

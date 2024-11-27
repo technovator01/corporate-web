@@ -11,14 +11,12 @@ const SuccessStories = dynamic(() => import('./SixthSection'), {
 
 export interface SectionHeading {
   title: string;
-  beforeHighlight: string;
-  highlight: string;
-  afterHighlight: string;
+  subtitle: string;
 }
 
 export interface SuccessStory {
   logo: {
-    type: "image" | "text";
+    type: string;
     content: string;
   };
   description: string;
@@ -27,7 +25,7 @@ export interface SuccessStory {
     description: string;
   };
   link: string;
-  imageClass: string;
+  image:string;
 }
 
 export interface SuccessStoriesProps {
@@ -35,7 +33,7 @@ export interface SuccessStoriesProps {
   stories: SuccessStory[];
 }
 
-export function SuccessStoriesWrapper({ heading, stories }: SuccessStoriesProps) { 
+export function SuccessStoriesWrapper({ heading, stories }: SuccessStoriesProps) {
   useEffect(() => {
     if (heading && stories) {
       console.log('Props received:', { heading, stories });
@@ -55,9 +53,7 @@ export function SuccessStoriesWrapper({ heading, stories }: SuccessStoriesProps)
 export const successStoriesData: SuccessStoriesProps = {
   heading: {
     title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
-    beforeHighlight: "Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an ",
-    highlight: "AI software development company",
-    afterHighlight: "that speak volumes and guarantee maximum ROI."
+    subtitle:"Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an that speak volumes and guarantee maximum ROI."
   },
   stories: [
     {
@@ -71,7 +67,7 @@ export const successStoriesData: SuccessStoriesProps = {
         description: 'in Series B Funding'
       },
       link: '/portfolio/jobget-job-search-app',
-      imageClass: 'img1'
+      image:""
     },
     {
       logo: {
@@ -84,7 +80,7 @@ export const successStoriesData: SuccessStoriesProps = {
         description: 'in Customer Engagement'
       },
       link: '/portfolio/ikea-ar-solution',
-      imageClass: 'img2'
+      image: ''
     },
     {
       logo: {
@@ -97,7 +93,7 @@ export const successStoriesData: SuccessStoriesProps = {
         description: 'in Processing Efficiency'
       },
       link: '/portfolio/techstart-ml-platform',
-      imageClass: 'img3'
+      image: ''
     }
   ]
 };
