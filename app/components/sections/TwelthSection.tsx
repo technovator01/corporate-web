@@ -21,24 +21,25 @@ const Blogs = () => {
 
   return (
     <section className="blog-sec">
-      <div className="container">
-        <h2 className="heading2 text-center">Related Blogs</h2>
-        <div className="blog__panel">
-          {blogData.map((blog, index) => (
-            <div className="blog_col" key={index}>
-              <div className="blog_image">
-                <a href={blog.link} target="_blank" rel="noreferrer">
-                  <img src={blog.image} alt={blog.title} />
-                </a>
-              </div>
-              <a className="blog_caption" href={blog.link}>
-                {blog.title}
-              </a>
-            </div>
-          ))}
+  <div className="container">
+    <h2 className="heading2 text-center">Related Blogs</h2>
+    <div className="blog__panel">
+      {blogData.map((blog, index) => (
+        <div className="blog_col" key={index}>
+          <div className="blog_image">
+            <a href={blog.link} target="_blank" rel="noreferrer">
+              <img src={blog.image} alt={blog.title} />
+            </a>
+          </div>
+          <a className="blog_caption" href={blog.link}>
+            {blog.title}
+          </a>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 

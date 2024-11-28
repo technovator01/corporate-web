@@ -29,8 +29,8 @@ const AIServiceSection = ({ services }: AIServiceSectionProps) => {
                     <br />
                     Being a renowned AI solutions company, we specialize in leveraging the power of AI to transform raw data into actionable insights,
                     <br />
-                    paving the way for operational efficiency and enhanced decision-making. Here are our reliably intelligent
-                    <h3 className="heading_inline">AI services</h3>
+                    paving the way for operational efficiency and enhanced decision-making. Here are our reliably intelligent 
+                    <h3 className="heading_inline"> AI services </h3>
                     that
                     <br />
                     can convert your vision into reality.

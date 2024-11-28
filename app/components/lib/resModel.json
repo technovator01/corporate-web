@@ -1,0 +1,304 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 100,
+    "items": [
+        {
+            "metadata": {
+                "tags": [],
+                "concepts": []
+            },
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "w6j98252myfo"
+                    }
+                },
+                "id": "3Gb1fwmy5LqkxlYGAXnS5f",
+                "type": "Entry",
+                "createdAt": "2024-11-26T16:06:24.666Z",
+                "updatedAt": "2024-11-26T16:06:24.666Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "publishedVersion": 7,
+                "revision": 1,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "industriesPage"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "industrySection": {
+                    "metadata": {
+                        "tags": [],
+                        "concepts": []
+                    },
+                    "sys": {
+                        "space": {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Space",
+                                "id": "w6j98252myfo"
+                            }
+                        },
+                        "id": "5y8o8Ul9SPKezc0w5IbLub",
+                        "type": "Entry",
+                        "createdAt": "2024-11-26T15:57:52.065Z",
+                        "updatedAt": "2024-11-26T15:57:52.065Z",
+                        "environment": {
+                            "sys": {
+                                "id": "master",
+                                "type": "Link",
+                                "linkType": "Environment"
+                            }
+                        },
+                        "publishedVersion": 6,
+                        "revision": 1,
+                        "contentType": {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "ContentType",
+                                "id": "industries"
+                            }
+                        },
+                        "locale": "en-US"
+                    },
+                    "fields": {
+                        "heading": "Industries That Our AI Development Services Excel In",
+                        "subheading": "Our AI developers specialize in integrating the best-in-class artificial intelligence services into\nyour business offerings, processes, and growth strategies, regardless of your industry.\n",
+                        "industryItem": [
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "4mIXF3YHy4SlVuceTjCPDr"
+                                }
+                            },
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "70ZaxgTghJIOHaD31RpVBa"
+                                }
+                            },
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "5moCOc9r5HviPhT0f3j5lC"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "whyChooseUs": {
+                    "metadata": {
+                        "tags": [],
+                        "concepts": []
+                    },
+                    "sys": {
+                        "space": {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Space",
+                                "id": "w6j98252myfo"
+                            }
+                        },
+                        "id": "5QI91pyCebsrGQMSeHxby6",
+                        "type": "Entry",
+                        "createdAt": "2024-11-26T16:02:32.631Z",
+                        "updatedAt": "2024-11-26T16:02:39.316Z",
+                        "environment": {
+                            "sys": {
+                                "id": "master",
+                                "type": "Link",
+                                "linkType": "Environment"
+                            }
+                        },
+                        "publishedVersion": 8,
+                        "revision": 2,
+                        "contentType": {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "ContentType",
+                                "id": "whyChooseUs"
+                            }
+                        },
+                        "locale": "en-US"
+                    },
+                    "fields": {
+                        "heading": "Why Choose Us as Your Artificial Intelligence App Development Company?",
+                        "subheading": "Being one of the dedicated AI services companies, we utilize our extensive domain expertise\nto push the boundaries of what is possible for your business. Our AI software and app development services in UK are designed to produce tangible results and unlock the full potential of the technology for your business.",
+                        "tabItem": [
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "3h4NPFIiAnPxGKfWKYQO0z"
+                                }
+                            },
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "6QnE6hbmgzBlA69m5fXbFD"
+                                }
+                            },
+                            {
+                                "sys": {
+                                    "type": "Link",
+                                    "linkType": "Entry",
+                                    "id": "Gy7h5y79HDreXb7fPPLA6"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "includes": {
+        "Entry": [
+            {
+                "metadata": {
+                    "tags": [],
+                    "concepts": []
+                },
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "w6j98252myfo"
+                        }
+                    },
+                    "id": "5QI91pyCebsrGQMSeHxby6",
+                    "type": "Entry",
+                    "createdAt": "2024-11-26T16:02:32.631Z",
+                    "updatedAt": "2024-11-26T16:02:39.316Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "publishedVersion": 8,
+                    "revision": 2,
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "whyChooseUs"
+                        }
+                    },
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "heading": "Why Choose Us as Your Artificial Intelligence App Development Company?",
+                    "subheading": "Being one of the dedicated AI services companies, we utilize our extensive domain expertise\nto push the boundaries of what is possible for your business. Our AI software and app development services in UK are designed to produce tangible results and unlock the full potential of the technology for your business.",
+                    "tabItem": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "3h4NPFIiAnPxGKfWKYQO0z"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "6QnE6hbmgzBlA69m5fXbFD"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "Gy7h5y79HDreXb7fPPLA6"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "metadata": {
+                    "tags": [],
+                    "concepts": []
+                },
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "w6j98252myfo"
+                        }
+                    },
+                    "id": "5y8o8Ul9SPKezc0w5IbLub",
+                    "type": "Entry",
+                    "createdAt": "2024-11-26T15:57:52.065Z",
+                    "updatedAt": "2024-11-26T15:57:52.065Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "publishedVersion": 6,
+                    "revision": 1,
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "industries"
+                        }
+                    },
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "heading": "Industries That Our AI Development Services Excel In",
+                    "subheading": "Our AI developers specialize in integrating the best-in-class artificial intelligence services into\nyour business offerings, processes, and growth strategies, regardless of your industry.\n",
+                    "industryItem": [
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "4mIXF3YHy4SlVuceTjCPDr"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "70ZaxgTghJIOHaD31RpVBa"
+                            }
+                        },
+                        {
+                            "sys": {
+                                "type": "Link",
+                                "linkType": "Entry",
+                                "id": "5moCOc9r5HviPhT0f3j5lC"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

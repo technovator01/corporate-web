@@ -93,8 +93,6 @@ export default async function AIServicesPage() {
     const {title, subtitle, cards} = await getAIData();
     const recognitionsData = await getRecognitions();
     const { heading, faqs } = await getFAQ();
-    console.log(heading);
-    console.log(faqs);
 
     return (
         <div className="portfolio_page scroll-container">
@@ -119,8 +117,8 @@ export default async function AIServicesPage() {
                     />
                 </Suspense>
           <TestimonialPanel
-        heading={sampleData.heading}
-        testimonials={sampleData.testimonials}
+        // heading={sampleData.heading}
+        // testimonials={sampleData.testimonials}
       />
         {/* <CustomApproachAI processCards={processCards} techStacks={techStacks} /> */}
         <Recognition {...recognitionsData} />

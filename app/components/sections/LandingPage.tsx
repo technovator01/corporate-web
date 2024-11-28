@@ -3,6 +3,7 @@ import { Asset } from "contentful";
 import { client } from "../lib/contentful";
 import Image from 'next/image';
 import { getData } from '../api/getLandingPageData';
+import ClientLogosCarousel from './clientlogocarousel';
 
 // Interfaces
 interface LandingPageProps {
@@ -38,24 +39,7 @@ export default async function LandingPage() {
         <VideoBanner videoUrl={videoUrl} />
         
         {/* Client Logos */}
-        <div className="client_logos">
-          <div className="trusted_brands horizontal_line text-center">
-            Trusted by conglomerates, enterprises, and startups alike
-          </div>
-          
-          <div className="client-logo-slider owl-carousel">
-            {['kfc', 'kpmg', 'dominos'].map((client) => (
-              <div key={client} className="item">
-                <Image
-                  src={`https://appinventiv.com/wp-content/uploads/2024/01/${client}-logo.svg`}
-                  alt={`${client} logo`}
-                  width={100}
-                  height={50}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+       <ClientLogosCarousel/>
       </div>
     </div>
   );

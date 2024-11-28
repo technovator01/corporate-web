@@ -53,8 +53,80 @@ const industriesData: IndustryItem[] = [
       link: "https://appinventiv.com/manufacturing-it-services/",
       image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/manufacture.svg",
       title: "Manufacturing"
-    }
-    // Add more items as needed...
+    },
+    {
+      link: "https://appinventiv.com/fintech-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
+      title: "Finance"
+    },
+    {
+      link: "https://appinventiv.com/mobile-game-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
+      title: "Games and Sports"
+    },
+    {
+      link: "https://appinventiv.com/on-demand-app-development/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
+      title: "On-Demand"
+    },{
+      link: "https://appinventiv.com/automotive-software-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
+      title: "Automotive"
+    },    {
+      link: "https://appinventiv.com/fintech-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
+      title: "Finance"
+    },
+    {
+      link: "https://appinventiv.com/mobile-game-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
+      title: "Games and Sports"
+    },
+    {
+      link: "https://appinventiv.com/on-demand-app-development/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
+      title: "On-Demand"
+    },{
+      link: "https://appinventiv.com/automotive-software-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
+      title: "Automotive"
+    },    {
+      link: "https://appinventiv.com/fintech-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
+      title: "Finance"
+    },
+    {
+      link: "https://appinventiv.com/mobile-game-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
+      title: "Games and Sports"
+    },
+    {
+      link: "https://appinventiv.com/on-demand-app-development/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
+      title: "On-Demand"
+    },{
+      link: "https://appinventiv.com/automotive-software-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
+      title: "Automotive"
+    },    {
+      link: "https://appinventiv.com/fintech-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
+      title: "Finance"
+    },
+    {
+      link: "https://appinventiv.com/mobile-game-app-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
+      title: "Games and Sports"
+    },
+    {
+      link: "https://appinventiv.com/on-demand-app-development/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
+      title: "On-Demand"
+    },{
+      link: "https://appinventiv.com/automotive-software-development-services/",
+      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
+      title: "Automotive"
+    },
   ];
 
 // Data for tabs
@@ -132,7 +204,7 @@ const FourthSection = () => {
           </h2>
           <div className="app__subhead text-center">
             Our
-            <h3 className="heading_inline">AI developers</h3>
+            <h3 className="heading_inline"> AI developers </h3>
             specialize in integrating the best-in-class artificial intelligence services into<br/>
             your business offerings, processes, and growth strategies, regardless of your industry.
           </div>
@@ -176,13 +248,13 @@ const FourthSection = () => {
           </h2>
 
           <div className="app__subhead sub_para">
-            Being one of the dedicated AI services companies, we utilize our extensive domain expertise<br/>
-            to push the boundaries of what is possible for your business. Our AI software and
-            <a href="https://appinventiv.com/en-uk/mobile-app-development-company-in-uk/">
-              app development services in UK
-            </a>
-            are designed to produce tangible results and unlock the full potential of the technology for your business.
-          </div>
+  Being one of the dedicated AI services companies, we utilize our extensive domain expertise <br/>
+  to push the boundaries of what is possible for your business. Our AI software and app development services in UK 
+  {/* <a href="https://appinventiv.com/en-uk/mobile-app-development-company-in-uk/"> */}
+      
+  {/* </a> */}
+    are designed to produce tangible results and unlock the full potential of the technology for your business.
+</div>
 
           <div className="parter_tab_panel">
             <div className="ds_flex flex_spc_btw">
