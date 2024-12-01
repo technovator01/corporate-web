@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="footer_wrapper">
+    <footer className="footer_wrapper" id='about'>
       <div className="footer-mid">
         <span
           className="top_arrw ds_flex flex_al_center flex_center"

@@ -100,7 +100,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
   }
   console.log(stories);
   return (
-    <section className="success_stories_wrapper" style={{ minHeight: '100vh' }}>
+    <section className="success_stories_wrapper" id='portfolio' style={{ minHeight: '100vh' }}>
       <div className="bg_wrapper">
         <div className="cl_success_stories">
           <h2 className="heading2 text-center">

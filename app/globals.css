@@ -34,7 +34,9 @@ img.emoji {
     padding: 0 !important
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 .wp-block-audio :where(figcaption) {
     color: #555;

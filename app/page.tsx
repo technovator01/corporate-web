@@ -95,7 +95,7 @@ export default async function AIServicesPage() {
     const { heading, faqs } = await getFAQ();
 
     return (
-        <div className="portfolio_page scroll-container">
+        <div className="portfolio_page scroll-container" id="lets-talk-ai">
             <main>
                 <div className="bg_lines"></div>
                 <div className="pin_spacers"></div>

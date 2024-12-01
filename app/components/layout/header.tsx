@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 interface menuItems {
   items: string[];
@@ -11,49 +11,76 @@ export default function Header({ items }: menuItems) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prevState) => !prevState); // Toggle state
+    setIsMenuOpen((prevState) => !prevState);
   };
-  
 
+  // Smooth scroll handler
+  const handleSmoothScroll = useCallback((event: React.MouseEvent, item: string) => {
+    event.preventDefault();
+    
+    // Convert item to valid ID (lowercase, replace spaces with hyphens)
+    const targetId = item.toLowerCase().replace(/\s+/g, '-');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' 
+      });
+
+      // Close mobile menu if open
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    }
+  }, [isMenuOpen]);
   return (
     <header className="header-container header-new nav-down" style={{ backgroundColor: 'black' }} id="header">
-      <div className="container">
-        <div className="ds_flex flex_spc_btw flex_al_center">
-          {/* Brand Logo Section */}
-          <div className="brand_logo">
-            <Link href="https://appinventiv.com">
-              <Image
-                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
-                alt="Appinventiv logo"
-                width={150}
-                height={50}
-                className="appi-blue-blk-logo"
-              />
-              <Image
-                src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
-                alt="Appinventiv white logo"
-                width={150}
-                height={50}
-                className="appi-blue-wht-logo"
-              />
-            </Link>
-          </div>
-
-          {/* Navigation Menu */}
-          <nav className="menu-wrapper">
-            <ul className="flex space-x-6">
-              {items.map((item, index) => (
-                <li key={index}>
-                  <Link href="/" className="nav-link">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+    <div className="container">
+      <div className="ds_flex flex_spc_btw flex_al_center">
+        {/* Brand Logo Section */}
+        <div className="brand_logo">
+          <Link href="https://appinventiv.com">
+            <Image
+              src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
+              alt="Appinventiv logo"
+              width={150}
+              height={50}
+              className="appi-blue-blk-logo"
+            />
+            <Image
+              src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
+              alt="Appinventiv white logo"
+              width={150}
+              height={50}
+              className="appi-blue-wht-logo"
+            />
+          </Link>
         </div>
 
+        {/* Navigation Menu */}
+        <nav className="menu-wrapper">
+          <ul className="flex space-x-2">
+            {items.map((item, index) => (
+              <li key={index}>
+                <a 
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                  className="nav-link"
+                  onClick={(e) => handleSmoothScroll(e, item)}
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+            <li className="nav__list common__btn">
+              <a className="contact-btn btn_line btn-effect" href="https://appinventiv.com/contact/">
+                <span>CONTACT US</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </div>
 
       <div className="mobile-menu">
     <div id="mob-header">
@@ -70,7 +97,7 @@ export default function Header({ items }: menuItems) {
 </div>
 
      <div className="nav__list common__btn mobile__btn">
-      <a className="btn-effect btn--show-modal" href="" onClick={toggleMenu}>
+      <a className="btn-effect btn--show-modal" href="">
        Contact Us
       </a>
      </div>
@@ -100,9 +127,13 @@ export default function Header({ items }: menuItems) {
       <ul className="accord-wrap">
               {items.map((item, index) => (
                 <li key={index}>
-                  <Link href="/" className="nav-link">
+                  <a 
+                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                    className="nav-link"
+                    onClick={(e) => handleSmoothScroll(e, item)}
+                  >
                     {item}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

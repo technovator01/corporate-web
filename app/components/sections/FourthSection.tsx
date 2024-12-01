@@ -195,7 +195,7 @@ const FourthSection = () => {
   const [activeTab, setActiveTab] = useState('tab1');
 
   return (
-    <div className="bg_wrapper">
+    <div className="bg_wrapper" id='industries'>
       <div className="container">
         <div className="sec_gap">
           <h2 className="heading2 text-center">

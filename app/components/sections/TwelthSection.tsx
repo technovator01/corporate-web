@@ -20,7 +20,7 @@ const Blogs = () => {
   ];
 
   return (
-    <section className="blog-sec">
+    <section className="blog-sec" id='resources'>
   <div className="container">
     <h2 className="heading2 text-center">Related Blogs</h2>
     <div className="blog__panel">
