@@ -116,12 +116,12 @@ export default async function AIServicesPage() {
                         stories={successStoriesData.stories}
                     />
                 </Suspense>
-          <TestimonialPanel
+           {/* <TestimonialPanel
         // heading={sampleData.heading}
         // testimonials={sampleData.testimonials}
-      />
+      />  */}
         {/* <CustomApproachAI processCards={processCards} techStacks={techStacks} /> */}
-        <Recognition {...recognitionsData} />
+        {/* <Recognition {...recognitionsData} /> */}
         {/* <ConsultationForm/> */}
         <FAQs faqs={faqs} heading={heading}/>
         <Blogs/>

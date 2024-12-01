@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { SectionHeading, SuccessStory } from './SuccessStoriesClientWraper';
 import Image from 'next/image';
+
 interface SuccessStoriesProps {
   heading: SectionHeading;
   stories: SuccessStory[];
@@ -10,8 +11,8 @@ interface SuccessStoriesProps {
 const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const panelsRef = useRef<HTMLDivElement>(null);
-  const [isGsapInitialized, setIsGsapInitialized] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const renderTitleLines = (title: string) => {
     if (!title) return null;
@@ -22,6 +23,23 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
       </React.Fragment>
     ));
   };
+
+  useEffect(() => {
+    // Check if it's mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add resize listener
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     let cleanup: (() => void) | undefined;
@@ -47,24 +65,33 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
           return;
         }
 
+        // Determine screen width
+        const isDesktop = window.innerWidth > 768;
+
+        // Create scroll trigger configuration
+        const scrollTriggerConfig = {
+          trigger: scrollContainerRef.current,
+          start: "top top",
+          end: () => `+=${sections.length * 100}%`,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          snap: 1 / (sections.length - 1),
+          pin: true,
+          anticipatePin: 1 as any, // Type assertion
+        } as const;
+
+        // Add pin for desktop
+        if (isDesktop) {
+          // scrollTriggerConfig.pin = true;
+          // scrollTriggerConfig.anticipatePin = 1;
+        }
+
+        // Create scroll tween
         const scrollTween = gsap.to(sections, {
           xPercent: -100 * (sections.length - 1),
           ease: "none",
-          scrollTrigger: {
-            trigger: scrollContainerRef.current,
-            pin: true,
-            start: "top top",
-            end: () => `+=${sections.length * 100}%`,
-            scrub: 1,
-            invalidateOnRefresh: true,
-            snap: 1 / (sections.length - 1),
-            anticipatePin: 1,
-            onUpdate: (self) => {
-            }
-          }
+          scrollTrigger: scrollTriggerConfig
         });
-
-        setIsGsapInitialized(true);
 
         return () => {
           scrollTween.kill();
@@ -98,9 +125,17 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
     console.error('Missing required props at render');
     return null;
   }
-  console.log(stories);
+
   return (
-    <section className="success_stories_wrapper" id='portfolio' style={{ minHeight: '100vh' }}>
+    <section 
+      className="success_stories_wrapper" 
+      id='portfolio' 
+      style={{ 
+        minHeight: '100vh', 
+        width: '100%', 
+        overflow: 'hidden' 
+      }}
+    >
       <div className="bg_wrapper">
         <div className="cl_success_stories">
           <h2 className="heading2 text-center">
@@ -110,10 +145,26 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
             {heading.subtitle}
           </div>
         </div>
-        {/* Change here for scroll View Adjustments */}
-        <div className="case_study_panel"  ref={scrollContainerRef} style={{ position: 'relative' }}>
-          <div className="case_scoll_sec" ref={panelsRef} style={{ position: 'relative' }}>
-          <span
+        <div 
+          className="case_study_panel"
+          ref={scrollContainerRef} 
+          style={{ 
+            position: 'relative', 
+            width: '100%', 
+            overflow: 'hidden' 
+          }}
+        >
+          <div 
+            className="case_scoll_sec"
+            ref={panelsRef} 
+            style={{ 
+              position: 'relative', 
+              display: 'flex',
+              flexDirection: 'row',
+              width: 'fit-content'
+            }}
+          >
+            <span
               className="block_bubble ds_flex flex_al_center flex_center" 
               data-scroll 
               data-scroll-repeat="true"
@@ -121,21 +172,31 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
               Scroll
             </span>
             {stories.map((story: SuccessStory, index: number) => (
-              <section className="panel" key={index}>
+              <section 
+                className="panel" 
+                key={index}
+                style={{
+                  width: 'calc(100vw - 40px)',
+                  maxWidth: '100%',
+                  margin: '0 20px',
+                  flexShrink: 0,
+                  boxSizing: 'border-box'
+                }}
+              >
                 <div className="portfolio_info">
-                  <div className="ds_flex flex_spc_btw flex_al_center">
-                    <div className="port__left">
+                  <div className="ds_flex flex_spc_btw flex_al_center" style={{ width: '100%' }}>
+                    <div className="port__left" style={{ width: '50%', padding: '0 15px' }}>
                       <div className="port_logo">
                         {story.logo?.type === 'image' ? (
-                         <Image 
-                         src={story.logo.content}
-                         alt="client logo"
-                         width={100}  // Specify an appropriate width
-                         height={100} // Specify an appropriate height
-                         loading="lazy"
-                         objectFit="contain" // Or "cover" depending on your design
-                         className="logo-image" // Optional: add a class for styling
-                       />
+                          <Image 
+                            src={story.logo.content}
+                            alt="client logo"
+                            width={100}
+                            height={100}
+                            loading="lazy"
+                            objectFit="contain"
+                            className="logo-image"
+                          />
                         ) : (
                           <h4 className="heading2">{story.logo?.content}</h4>
                         )}
@@ -171,13 +232,15 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
                       </div>
                     </div>
                     <div 
-  className={`port__rght`}
-  style={{
-    background: `url(${story.image}) no-repeat`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover'
-  }}
-></div>
+                      className={`port__rght`}
+                      style={{
+                        width: '50%',
+                        height: '500px',
+                        background: `url(${story.image}) no-repeat`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover'
+                      }}
+                    ></div>
                   </div>
                 </div>
               </section>
@@ -185,6 +248,37 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .case_study_panel {
+            overflow-x: hidden;
+            width: 100%;
+          }
+          
+          .case_scoll_sec {
+            display: flex;
+            flex-direction: row;
+            width: fit-content;
+          }
+          
+          .panel {
+            flex-shrink: 0;
+            width: calc(100vw - 40px) !important;
+            max-width: 100% !important;
+            margin: 0 20px !important;
+            box-sizing: border-box;
+          }
+          
+          .port__left, .port__rght {
+            width: 100% !important;
+          }
+          
+          .port__rght {
+            height: 300px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 };

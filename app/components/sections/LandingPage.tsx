@@ -23,11 +23,11 @@ export default async function LandingPage() {
           <h1 id="ai-development-services" className="heading1">
             {title}
           </h1>
-          
+
           <div className="app__subhead">
             {subtitle}
           </div>
-          
+
           <div className="common__btn hv_blue">
             <a href="#" className="btn_line btn-effect btn--show-modal">
               Consult Our AI Experts
