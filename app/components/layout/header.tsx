@@ -89,7 +89,8 @@ export default function Header({ items }: menuItems) {
     <img 
       alt="Appinventiv - logo" 
       className="appinventiv-mob-wht-logo" 
-      src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
+      // src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
+        src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
       width="100" 
       height="20" 
     />
