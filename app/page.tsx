@@ -13,82 +13,8 @@ import FAQs from './components/sections/Eleventh';
 import {SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
 import TestimonialPanel from './components/sections/SeventhSection';
 
-// const successStoriesData: SuccessStoriesProps = {
-//   heading: {
-//     title: "How Our Clients Leverage AI to Innovate Instantly and Flourish Globally",
-//     subtitle:"Our commitment to delivering quality work that meets custom requirements has consistently exceeded expectations. Here are a few noteworthy projects we have undertaken as an that speak volumes and guarantee maximum ROI."
-//   },
-//   stories: [
-//     {
-//       logo: {
-//         type: "image",
-//         content: '/images/jobget-port-logo.svg'
-//       },
-//       description: 'As a trusted provider of mobile app development service, we made the employment landscape easy and accessible for blue-collar workers with the help of a dedicated employment portal.',
-//       result: {
-//         value: '$52 Million',
-//         description: 'in Series B Funding'
-//       },
-//       link: '/portfolio/jobget-job-search-app',
-//       image: ''
-//     },
-//     {
-//       logo: {
-//         type: "image",
-//         content: '/images/ikea-logo.svg'
-//       },
-//       description: 'Developed an innovative AI-powered solution for automated furniture recognition and placement visualization.',
-//       result: {
-//         value: '40% Increase',
-//         description: 'in Customer Engagement'
-//       },
-//       link: '/portfolio/ikea-ar-solution',
-//       image: ''
-//     },
-//     {
-//       logo: {
-//         type: "text",
-//         content: 'TechStart'
-//       },
-//       description: 'Built a scalable machine learning platform for predictive analytics and real-time decision making.',
-//       result: {
-//         value: '3x Growth',
-//         description: 'in Processing Efficiency'
-//       },
-//       link: '/portfolio/techstart-ml-platform',
-//       image: ''
-//     }
-//   ]
-// };
-const sampleData = {
-    heading: {
-      main: "What Our Clients Have<br/>to Say for Us",
-      subHeadBefore: "As a bespoke ",
-      highlighted: "artificial intelligence software development company",
-      subHeadAfter: "we have helped multiple startups, enterprises, and Fortune 500s in realizing their business visions. Our AI software development services make AI accessible to everyone, everywhere."
-    },
-    testimonials: [
-      {
-        name: "Daniel Yasoshima",
-        position: "Chief Executive Officer",
-        company: "YouComm",
-        image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Daniel-Yasoshima-client-name.svg",
-        companyLogo: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/YouCOMM-logo.svg",
-        testimonial: "We came to Appinventiv looking for a change in the conventional system where patients had to depend on call bells for getting assistance. The team, however, advised us feature additions that would make the solution truly all-patients inclusive. They made our product more innovative and useful than we had envisioned."
-      },
-      {
-        name: "Billy Lan",
-        position: "CTO and Co-founder",
-        company: "JobGet",
-        image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Billy-Lan-client-image.svg",
-        companyLogo: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/jobget-cl.svg",
-        testimonial: "We were looking for an agency that would understand the direness of the hourly worker job search cycle situation when we came across Appinventiv. What we liked about the team is how they did not just understand what we were looking for but also gave us ideas on how we could make the process more efficient and simplified for the jobseekers through their empathy mapping skillset."
-      }
-    ]
-  };
-
 export default async function AIServicesPage() {
-    const { services  } = await getData();
+    const { services,serviceheading,servicesubheading  } = await getData();
     const successStoriesData  = await getSuccessStories();
     const {title, subtitle, cards} = await getAIData();
     const recognitionsData = await getRecognitions();
@@ -104,8 +30,7 @@ export default async function AIServicesPage() {
                     <LandingPage />
                 </Suspense>
                 <AIServiceSection
-                    services={services}
-                />
+                    services={services} heading={serviceheading} subheading={servicesubheading}                />
                 <CompanyStats />
                 <ThirdSection title={title} subtitle={subtitle} cards={cards} />;
                 <FourthSection/>

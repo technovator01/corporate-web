@@ -11,9 +11,10 @@ export async function getData() {
         const headingResponse = await client.getEntries({ content_type: 'heading' });
         const videoResponse = await client.getEntries<any>({ content_type: 'landingVideo' });
         const servicesResponse = await client.getEntries({ content_type: 'aiServices' }); // Add this
+        const servicesHeadResponse = await client.getEntries({ content_type: 'aiServicesSection' }); // Add this
         const IndustryItemResponse = await client.getEntries({ content_type: 'industriesPage' });
 
-        // console.log(IndustryItemResponse);
+        console.log(videoResponse);
         let title = '';
         const headingFields = headingResponse.items[0]?.fields;
 
@@ -29,20 +30,50 @@ export async function getData() {
         const videoUrl = videoAsset?.fields?.file?.url
             ? `https:${videoAsset.fields.file.url}`
             : '';
+// Fetching Logo Urls
+const logoHeading = videoResponse.items[0].fields.logoHeading as string;
+
+        const logoArray = videoResponse.items[0].fields.logoCarousel; // Assuming this is an array
+
+const logoUrls: string[] = [];
+
+// Type guard to check if an item is an object with a "fields" property
+function hasFields(item: any): item is { fields: { file: { url: string } } } {
+  return item && typeof item === 'object' && 'fields' in item && 'file' in item.fields && 'url' in item.fields.file;
+}
+
+// Iterate through the array using a for...of loop
+if (Array.isArray(logoArray)) {
+  for (const logoItem of logoArray) {
+    // Check if the logoItem has the required structure
+    if (hasFields(logoItem)) {
+      const logoUrl = logoItem.fields.file.url ? `https:${logoItem.fields.file.url}` : '';
+      if (logoUrl) {
+        logoUrls.push(logoUrl);
+      }
+    }
+  }
+}
 
         // Format services data
+        const serviceheading = servicesHeadResponse.items[0]?.fields?.heading as string || '';
+        const servicesubheading = servicesHeadResponse.items[0]?.fields?.subheading as string || '';
         const services = servicesResponse.items.map((item: any) => ({
             id: item.sys.id,
             title: item.fields.title,
             description: item.fields.description,
             icon: `https:${item.fields.icon.fields.file.url}`
         }));
-
+        const heading= servicesResponse
         return {
             title,
             subtitle,
             videoUrl,
-            services // Add this
+            logoHeading,
+            logoUrls,
+            services, // Add this
+            serviceheading,
+            servicesubheading
         };
     } catch (error) {
         console.error('Failed to fetch content:', error);

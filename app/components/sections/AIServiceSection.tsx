@@ -8,12 +8,13 @@ interface Service {
   title: string;
   description: string;
 }
-
 interface AIServiceSectionProps {
+  heading: any;
+  subheading: any;
   services: Service[];
 }
 
-const AIServiceSection = ({ services }: AIServiceSectionProps) => {
+const AIServiceSection = ({  heading, subheading, services }: AIServiceSectionProps) => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Detect mobile view
@@ -30,21 +31,11 @@ const AIServiceSection = ({ services }: AIServiceSectionProps) => {
     <section className="bg_wrapper" id="services">
       <div className="container">
         <h2 className="heading2">
-          Artificial Intelligence Development
-          <br />
-          Services We Offer
+          {heading}
         </h2>
 
         <div className="app__subhead sub_para">
-          Our AI development services are known to unlock the potential of vast amounts of data for driving tangible business results.
-          <br />
-          Being a renowned AI solutions company, we specialize in leveraging the power of AI to transform raw data into actionable insights,
-          <br />
-          paving the way for operational efficiency and enhanced decision-making. Here are our reliably intelligent 
-          <h3 className="heading_inline"> AI services </h3>
-          that
-          <br />
-          can convert your vision into reality.
+          {subheading}
         </div>
 
         <div className="services_container">
