@@ -3,13 +3,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 
-interface menuItems {
-  items: string[];
+export interface menuItems {
+    items: string[];
+  }
+
+export interface HeaderItems{
+  logo:string;
+  items: menuItems
 }
 
-export default function Header({ items }: menuItems) {
+export default function Header({ items, logo }: HeaderItems) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+console.log(items);
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
@@ -42,14 +47,14 @@ export default function Header({ items }: menuItems) {
         <div className="brand_logo">
           <Link href="https://appinventiv.com">
             <Image
-              src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
+              src={logo}
               alt="Appinventiv logo"
               width={150}
               height={50}
               className="appi-blue-blk-logo"
             />
             <Image
-              src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
+              src={logo}
               alt="Appinventiv white logo"
               width={150}
               height={50}
@@ -61,7 +66,7 @@ export default function Header({ items }: menuItems) {
         {/* Navigation Menu */}
         <nav className="menu-wrapper">
           <ul className="flex space-x-2">
-            {items.map((item, index) => (
+            {items.items.map((item, index) => (
               <li key={index}>
                 <a 
                   href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
@@ -90,7 +95,7 @@ export default function Header({ items }: menuItems) {
       alt="Appinventiv - logo" 
       className="appinventiv-mob-wht-logo" 
       // src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
-        src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/appinventiv-mob-wht-logo.svg"
+        src={logo}
       width="100" 
       height="20" 
     />
@@ -117,7 +122,7 @@ export default function Header({ items }: menuItems) {
     <img 
       alt="Appinventiv - logo" 
       className="appinventiv-mob-wht-logo" 
-      src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
+      src={logo}
       width="50" 
       height="20" 
     />
@@ -126,7 +131,7 @@ export default function Header({ items }: menuItems) {
 
      <div className="main-nav">
       <ul className="accord-wrap">
-              {items.map((item, index) => (
+              {items.items.map((item, index) => (
                 <li key={index}>
                   <a 
                     href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 

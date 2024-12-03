@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "./components/layout/footer";
 import { fetchNavbarItems } from "./components/api/getLandingPageData";
-import Header from "./components/layout/header";
+import Header, { HeaderItems } from "./components/layout/header";
 import CustomHead from "./customHead";
 
 
@@ -29,15 +29,20 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    const menuItems = await fetchNavbarItems();
-
+    const {menuItems, logoUrl} = await fetchNavbarItems();
+    const headerItems: HeaderItems = {
+      logo: logoUrl || '',
+      items: {
+        items: menuItems
+      }
+    };
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <CustomHead/>
-        <Header items={menuItems} />
+        <Header {...headerItems} />;
         {children}
         <Footer/>
       </body>

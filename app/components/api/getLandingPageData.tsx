@@ -231,15 +231,38 @@ export async function getRecognitions(): Promise<Recognition> {
     }
   }
 
+  interface LogoAsset {
+    fields: {
+        file: {
+            url: string;
+        }
+    }
+}
+
 export async function fetchNavbarItems() {
     try {
         const response = await client.getEntries({ content_type: 'websiteNavbar' });
 
-        const menuItems = response.items[0]?.fields?.menuItems as string[];
+        const menuItems = response.items[0]?.fields?.menuItems as string[] || [];
+        
+        // Type guard to check if logo is an Asset
+        const logoAsset = response.items[0]?.fields?.logo;
+        let logoUrl: string | null = null;
 
-        return menuItems || [];
+        if (logoAsset && typeof logoAsset === 'object' && 'fields' in logoAsset) {
+            const logo = logoAsset as LogoAsset;
+            logoUrl = logo.fields.file.url ? `https:${logo.fields.file.url}` : null;
+        }
+
+        return {
+            menuItems,
+            logoUrl
+        };
     } catch (error) {
         console.error('Failed to fetch navbar items:', error);
-        return [];
+        return {
+            menuItems: [],
+            logoUrl: null
+        };
     }
 }
