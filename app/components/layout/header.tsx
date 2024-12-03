@@ -14,7 +14,7 @@ export interface HeaderItems{
 
 export default function Header({ items, logo }: HeaderItems) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-console.log(items);
+
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };

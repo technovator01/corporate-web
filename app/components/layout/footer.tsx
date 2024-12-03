@@ -1,6 +1,14 @@
 import Link from "next/link";
+import { getFooter } from "../api/getLandingPageData";
 
-export const Footer = () => {
+export interface FooterProps {
+  about: string[];
+  agency: string;
+  copyright: string;
+  legalinfo: string;
+}
+
+export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legalinfo })=> {
   return (
     <footer className="footer_wrapper" id='about'>
       <div className="footer-mid">
@@ -16,17 +24,16 @@ export const Footer = () => {
           <div className="flex_wrapper space_between">
             {/* About Section */}
             <FooterColumn title="About">
-              <FooterLink href="https://appinventiv.com/about/">Our Company</FooterLink>
-              <FooterLink href="https://appinventiv.com/core-team/">Core Team</FooterLink>
-              <FooterLink href="https://appinventiv.com/career/">Career</FooterLink>
-              <FooterLink href="https://appinventiv.com/corporate-social-responsibility/">
-                CSR
+            <FooterLink href={""}>
+                {/* Dynamically generate list items based on the length of the 'about' array */}
+                {about.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
               </FooterLink>
-              <FooterLink href="https://appinventiv.com/how-we-work/">How We Work</FooterLink>
             </FooterColumn>
 
             {/* Services Section */}
-            <FooterColumn title="Services">
+            {/* <FooterColumn title="Services">
               <FooterLink href="https://appinventiv.com/iphone-application-development/">
                 iOS App Development
               </FooterLink>
@@ -49,7 +56,7 @@ export const Footer = () => {
                 Digital Transformation
               </FooterLink>
               <FooterLink href="https://appinventiv.com/service/">more...</FooterLink>
-            </FooterColumn>
+            </FooterColumn> */}
 
             {/* Add other columns like Technologies, Industries, Portfolio, and Resources similarly */}
           </div>
@@ -75,15 +82,14 @@ export const Footer = () => {
             </figure>
             <div className="full_stack">
               <p>
-                Full stack mobile (iOS, Android) and web app <br />
-                design and development agency
+                {agency}
               </p>
             </div>
           </div>
           <div className="flex_wrapper space_between">
             <div className="statutory-mwrapper">
               <div className="statutory-nav">
-                <a>Statutory legal information</a>
+                <a>{legalinfo}</a>
                 <div className="statutory-para">
                   <p>
                     Appinventiv is the Registered Name of Appinventiv Technologies Pvt. Ltd., a mobile app development
@@ -102,14 +108,14 @@ export const Footer = () => {
             <div className="copy_rght">
               <ul>
                 <li>
-                  <span className="copy">2024-2025 (c) Appinventiv</span>
+                  <span className="copy">{copyright}</span>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="https://appinventiv.com/sitemap/">SiteMap</Link>
                 </li>
                 <li>
                   <Link href="https://appinventiv.com/privacy-policy/">Privacy Policy</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
             <ul className="foot_social_network">

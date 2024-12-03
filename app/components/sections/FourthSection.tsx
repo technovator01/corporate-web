@@ -2,132 +2,19 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-interface ParsedData {
-  industrySection: IndustrySection;
-  whyChooseUs: WhyChooseUs;
-}
-
-interface IndustryItem {
+export interface IndustryItem {
     link: string;
     image: string;
     title: string;
   }
 
-interface IndustrySection{
-  heading:string,
-  subheading:string,
-  item:IndustryItem[]
-}
 
-interface WhyChooseUs{
-  heading:string,
-  subheading:string,
-  item:TabItem[]
-}
-
-interface TabItem{
+export interface TabItem{
   id:string,
   title:string,
   image:string,
   content:string
 }
-
-// Modified industries data without static grid classes
-const industriesData: IndustryItem[] = [
-    {
-      link: "https://appinventiv.com/healthcare-software-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/healthcare-indus.svg",
-      title: "Healthcare"
-    },
-    {
-      link: "https://appinventiv.com/social-media-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/social-networking-indus.svg",
-      title: "Social Networking"
-    },
-    {
-      link: "https://appinventiv.com/education-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/education-indus.svg",
-      title: "Education"
-    },
-    {
-      link: "https://appinventiv.com/manufacturing-it-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/manufacture.svg",
-      title: "Manufacturing"
-    },
-    {
-      link: "https://appinventiv.com/fintech-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
-      title: "Finance"
-    },
-    {
-      link: "https://appinventiv.com/mobile-game-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
-      title: "Games and Sports"
-    },
-    {
-      link: "https://appinventiv.com/on-demand-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
-      title: "On-Demand"
-    },{
-      link: "https://appinventiv.com/automotive-software-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
-      title: "Automotive"
-    },    {
-      link: "https://appinventiv.com/fintech-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
-      title: "Finance"
-    },
-    {
-      link: "https://appinventiv.com/mobile-game-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
-      title: "Games and Sports"
-    },
-    {
-      link: "https://appinventiv.com/on-demand-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
-      title: "On-Demand"
-    },{
-      link: "https://appinventiv.com/automotive-software-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
-      title: "Automotive"
-    },    {
-      link: "https://appinventiv.com/fintech-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
-      title: "Finance"
-    },
-    {
-      link: "https://appinventiv.com/mobile-game-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
-      title: "Games and Sports"
-    },
-    {
-      link: "https://appinventiv.com/on-demand-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
-      title: "On-Demand"
-    },{
-      link: "https://appinventiv.com/automotive-software-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
-      title: "Automotive"
-    },    {
-      link: "https://appinventiv.com/fintech-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/finance-indus.svg",
-      title: "Finance"
-    },
-    {
-      link: "https://appinventiv.com/mobile-game-app-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/games-and-sports-indus.svg",
-      title: "Games and Sports"
-    },
-    {
-      link: "https://appinventiv.com/on-demand-app-development/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/on-demand-indus.svg",
-      title: "On-Demand"
-    },{
-      link: "https://appinventiv.com/automotive-software-development-services/",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/automotive-icon.svg",
-      title: "Automotive"
-    },
-  ];
 
 // Data for tabs
 const tabsData = [
@@ -157,7 +44,7 @@ const tabsData = [
     }
   ];
 
-  const IndustriesGrid = () => {
+  const IndustriesGrid = ({industriesData}:{industriesData:IndustryItem[]}) => {
     // Function to chunk array into groups of 4
     const chunkArray = (arr: IndustryItem[], size: number): IndustryItem[][] => {
       const chunks: IndustryItem[][] = [];
@@ -191,26 +78,24 @@ const tabsData = [
 };
 
 // Modified FourthSection component
-const FourthSection = () => {
-  const [activeTab, setActiveTab] = useState('tab1');
-
+const FourthSection = ({items, data}:{items:any, data:any}) => {
+  const [activeTab, setActiveTab] = useState('tab3');
+  const industriesData=data.get('industriesData') as IndustryItem[];
+  const TabItems = data.get('tabItems') as TabItem[];
+  console.log(TabItems);
   return (
     <div className="bg_wrapper" id='industries'>
       <div className="container">
         <div className="sec_gap">
           <h2 className="heading2 text-center">
-            Industries That Our AI Development<br/>
-            Services Excel In
+            {items[0].industryHeading}
           </h2>
           <div className="app__subhead text-center">
-            Our
-            <h3 className="heading_inline"> AI developers </h3>
-            specialize in integrating the best-in-class artificial intelligence services into<br/>
-            your business offerings, processes, and growth strategies, regardless of your industry.
+          {items[0].industrySubHeading}
           </div>
 
-          <IndustriesGrid />
-
+          <IndustriesGrid industriesData={industriesData}/>
+    
           <div className="common__btn center hv_blue">
             <a 
               className="btn_line btn-effect btn--show-modal" 
@@ -243,24 +128,18 @@ const FourthSection = () => {
           </div> */}
 
           <h2 className="heading2">
-            Why Choose Us as Your Artificial<br/>
-            Intelligence App Development Company?
+            {items[0].wcuHeading}
           </h2>
 
           <div className="app__subhead sub_para">
-  Being one of the dedicated AI services companies, we utilize our extensive domain expertise <br/>
-  to push the boundaries of what is possible for your business. Our AI software and app development services in UK 
-  {/* <a href="https://appinventiv.com/en-uk/mobile-app-development-company-in-uk/"> */}
-      
-  {/* </a> */}
-    are designed to produce tangible results and unlock the full potential of the technology for your business.
+          {items[0].wcuSubHeading}
 </div>
 
           <div className="parter_tab_panel">
             <div className="ds_flex flex_spc_btw">
               <div className="tab__head_panel">
                 <ul>
-                  {tabsData.map((tab) => {
+                  {TabItems.map((tab) => {
                     console.log(tab);
                     return (
                     <li 

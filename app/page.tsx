@@ -2,10 +2,10 @@ import React, { Suspense } from 'react';
 import LandingPage from './components/sections/LandingPage';
 import SectionLoader from './components/sections/SectionLoader';
 import AIServiceSection from './components/sections/AIServiceSection';
-import { getAIData, getData, getFAQ, getRecognitions, getSuccessStories } from './components/api/getLandingPageData';
+import { getAIData, getBlogs, getCTAPageData, getData, getFAQ, getIndustries, getIndustryPageData, getRecognitions, getSuccessStories } from './components/api/getLandingPageData';
 import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
-import FourthSection from './components/sections/FourthSection';
+import FourthSection, { IndustryItem, TabItem } from './components/sections/FourthSection';
 import CTASection from './components/sections/FifthSection';
 import Recognition from './components/sections/NinthSection';
 import Blogs from './components/sections/TwelthSection';
@@ -19,7 +19,10 @@ export default async function AIServicesPage() {
     const {title, subtitle, cards} = await getAIData();
     const recognitionsData = await getRecognitions();
     const { heading, faqs } = await getFAQ();
-
+    const items = await getIndustries();
+    const data= await getIndustryPageData();
+    const ctaData = await getCTAPageData();
+    const blogData = await getBlogs();
     return (
         <div className="portfolio_page scroll-container" id="lets-talk-ai">
             <main>
@@ -33,8 +36,8 @@ export default async function AIServicesPage() {
                     services={services} heading={serviceheading} subheading={servicesubheading}                />
                 <CompanyStats />
                 <ThirdSection title={title} subtitle={subtitle} cards={cards} />;
-                <FourthSection/>
-                <CTASection />
+                <FourthSection items={items} data={data}/>
+                <CTASection ctaData={ctaData}/>
                 <Suspense fallback={<SectionLoader />}>
                     <SuccessStoriesWrapper
                         heading={successStoriesData.heading}
@@ -49,7 +52,7 @@ export default async function AIServicesPage() {
         {/* <Recognition {...recognitionsData} /> */}
         {/* <ConsultationForm/> */}
         <FAQs faqs={faqs} heading={heading}/>
-        <Blogs/>
+            <Blogs blogData={blogData?.blogItems} blogheading={blogData?.blogheading}/>
             </main>
         </div>
     );

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Footer } from "./components/layout/footer";
-import { fetchNavbarItems } from "./components/api/getLandingPageData";
+import { fetchNavbarItems, getFooter } from "./components/api/getLandingPageData";
 import Header, { HeaderItems } from "./components/layout/header";
 import CustomHead from "./customHead";
 
@@ -30,6 +30,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
     const {menuItems, logoUrl} = await fetchNavbarItems();
+    const data = await getFooter();
+
     const headerItems: HeaderItems = {
       logo: logoUrl || '',
       items: {
@@ -44,7 +46,7 @@ export default async function RootLayout({
         <CustomHead/>
         <Header {...headerItems} />;
         {children}
-        <Footer/>
+        <Footer about={data.about} agency={data.agency} copyright={data.copyright} legalinfo={data.legalinfo}/>
       </body>
     </html>
   );

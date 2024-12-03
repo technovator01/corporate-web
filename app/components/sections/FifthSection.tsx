@@ -1,37 +1,25 @@
 'use client'
 import React from 'react';
 
-// Types for the component props
-interface CTASectionProps {
-  data?: typeof defaultCTAData;
+// Default content ctaData
+export interface CTAData {
+  heading: string;
+  subheading: string;
+  buttonText: string;
+  image: string;
 }
 
-// Default content data
-const defaultCTAData = {
-  heading: "Don't miss out on the transformative power of AI",
-  subheading: "We can help you unlock the power of artificial intelligence and reinvent a new era of operational efficiency for your business",
-  buttonText: "Speak with Our Consultants",
-  buttonAction: () => {
-    // Default action - can be overridden via props
-    console.log('CTA button clicked');
-  },
-  image: {
-    src: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/female-employee-talking-banner.webp",
-    alt: "transformative power of AI"
-  }
-};
-
-const CTASection: React.FC<CTASectionProps> = ({ data = defaultCTAData }) => {
+const CTASection = ({ctaData}:{ctaData: CTAData}) => {
   return (
     <div className="center_cta">
       <div className="container">
         <div className="cta_hd text-center wht">
           <strong>
-            {data.heading}
+            {ctaData.heading}
           </strong>
         </div>
         <div className="app__subhead text-center">
-          {data.subheading}
+          {ctaData.subheading}
           <br/>
         </div>
         <div className="common__btn center hv_blue">
@@ -40,11 +28,11 @@ const CTASection: React.FC<CTASectionProps> = ({ data = defaultCTAData }) => {
             href="#" 
             onClick={(e) => {
               e.preventDefault();
-              data.buttonAction();
+              // ctaData.buttonAction();
             }}
           >
             <span>
-              {data.buttonText}
+              {ctaData.buttonText}
             </span>
             <svg height="10px" viewBox="0 0 13 10" width="13px">
               <polyline points="8 1 12 5 8 9"></polyline>
@@ -53,9 +41,8 @@ const CTASection: React.FC<CTASectionProps> = ({ data = defaultCTAData }) => {
         </div>
         <figure className="cta_centerimg">
           <img 
-            alt={data.image.alt} 
             className="center" 
-            src={data.image.src}
+            src={ctaData.image}
           />
         </figure>
       </div>
