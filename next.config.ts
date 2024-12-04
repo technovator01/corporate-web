@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
 // next.config.js
 module.exports = {
   images: {
+    dangerouslyAllowSVG: true,
     domains: ['appinventiv.com', 'videos.ctfassets.net','images.ctfassets.net'],
   },
 };
