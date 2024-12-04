@@ -16,34 +16,6 @@ export interface TabItem{
   content:string
 }
 
-// Data for tabs
-const tabsData = [
-    {
-      id: "tab1",
-      title: "Vendor Neutral",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/vendor-neutral-banner.webp",
-      content: "We are an independent AI development company that is not tied to any vendor. Thus, our years of expertise in offering custom artificial intelligence development solutions to our clients are undoubtedly based on business requirements and end goals."
-    },
-    {
-      id: "tab2",
-      title: "Unmatched Technical Prowess",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Unmatched-Technical-Prowess.webp",
-      content: "Our team of AI app developers has extensive knowledge and experience in offering state-of-the-art AI and ML solutions based on cutting-edge technologies such as cloud, React Native, Angular, MongoDB, MySQL, Javascript, Python, and Ruby."
-    },
-    {
-      id: "tab3",
-      title: "Security-First Approach",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Security-First-Approach.webp",
-      content: "Our artificial intelligence development services are carried out keeping in mind the latest security compliances. As a dedicated custom AI development company, we ensure our development practices swiftly analyze multiple data sets and track cyber threats."
-    },
-    {
-      id: "tab4",
-      title: "Strong R & D Expertise",
-      image: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Security-First-Approach.webp",
-      content: "As a dedicated AI app development services company, our R&D endeavors are capable of streamlining business processes and effective in reducing marginal costs and increasing marginal productivity."
-    }
-  ];
-
   const IndustriesGrid = ({industriesData}:{industriesData:IndustryItem[]}) => {
     // Function to chunk array into groups of 4
     const chunkArray = (arr: IndustryItem[], size: number): IndustryItem[][] => {
@@ -82,7 +54,7 @@ const FourthSection = ({items, data}:{items:any, data:any}) => {
   const [activeTab, setActiveTab] = useState('tab3');
   const industriesData=data.get('industriesData') as IndustryItem[];
   const TabItems = data.get('tabItems') as TabItem[];
-  console.log(TabItems);
+
   return (
     <div className="bg_wrapper" id='industries'>
       <div className="container">
@@ -140,7 +112,6 @@ const FourthSection = ({items, data}:{items:any, data:any}) => {
               <div className="tab__head_panel">
                 <ul>
                   {TabItems.map((tab) => {
-                    console.log(tab);
                     return (
                     <li 
                       key={tab.id} 
@@ -155,7 +126,7 @@ const FourthSection = ({items, data}:{items:any, data:any}) => {
               </div>
 
               <div className="part_rght_panel ds_flex flex_spc_btw">
-                {tabsData.map((tab) => (
+                {TabItems.map((tab) => (
                   <div 
                     key={tab.id}
                     className={`tab-detail${activeTab === tab.id ? 'block' : ''}`} 
