@@ -7223,6 +7223,29 @@ br.br-block {
     height: 45px
 }
 
+.brand_logo {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.appi-blue-blk-logo, .appi-blue-wht-logo {
+    /* Optionally, adjust the width based on the screen size */
+    width: 100%;
+    max-width: 150px; /* Ensure the max size does not exceed 150px */
+  }
+  @media (max-width: 768px) {
+    .appi-blue-blk-logo, .appi-blue-wht-logo {
+      max-width: 120px; /* Smaller logo on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appi-blue-blk-logo, .appi-blue-wht-logo {
+      max-width: 100px; /* Even smaller logo on very small screens */
+    }
+  }
 .appi-blue-wht-logo {
     display: block
 }

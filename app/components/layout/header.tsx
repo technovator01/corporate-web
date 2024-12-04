@@ -45,21 +45,23 @@ export default function Header({ items, logo }: HeaderItems) {
       <div className="ds_flex flex_spc_btw flex_al_center">
         {/* Brand Logo Section */}
         <div className="brand_logo">
-          <Link href="https://appinventiv.com">
+          <Link href="https://novotek.ai">
             <Image
               src={logo}
-              alt="Appinventiv logo"
-              width={150}
-              height={50}
-              className="appi-blue-blk-logo"
+              alt="Novotek logo"
+              width={160}
+              layout="intrinsic" 
+              height={45}
+              className="novo-blue-blk-logo"
             />
-            <Image
+            {/* <Image
               src={logo}
-              alt="Appinventiv white logo"
-              width={150}
-              height={50}
-              className="appi-blue-wht-logo"
-            />
+              alt="Novotek white logo"
+              layout="intrinsic" 
+              width={160}
+              height={45}
+              className="novo-blue-wht-logo"
+            /> */}
           </Link>
         </div>
 
