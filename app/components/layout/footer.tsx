@@ -120,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legali
             </div>
             <ul className="foot_social_network">
               <li className="facebook">
-                <a href="https://www.facebook.com/AppInventiv/" target="_blank" rel="nofollow">
+                <a href="/" target="_blank" rel="nofollow">
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
               </li>

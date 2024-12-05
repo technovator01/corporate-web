@@ -80,7 +80,7 @@ export default function Header({ items, logo }: HeaderItems) {
               </li>
             ))}
             <li className="nav__list common__btn">
-              <a className="contact-btn btn_line btn-effect" href="https://appinventiv.com/contact/">
+              <a className="contact-btn btn_line btn-effect" href="/contact">
                 <span>CONTACT US</span>
               </a>
             </li>
@@ -148,10 +148,10 @@ export default function Header({ items, logo }: HeaderItems) {
       <div className="menu-btn-wrapper menu-wrapper">
        <ul>
         <li className="nav_contact btn_effect">
-         <a className="ad-page jmp-to-form" href="https://appinventiv.com/contact/">
+         <a className="ad-page jmp-to-form" href="/contact">
           Schedule a call
          </a>
-         <a href="https://appinventiv.com/contact/">
+         <a href="/">
           contact us
          </a>
         </li>

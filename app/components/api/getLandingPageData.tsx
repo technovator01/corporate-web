@@ -421,10 +421,9 @@ interface FooterData {
   
       // Extract fields with type safety and default values
       const about = (footerResponse.items[0]?.fields?.about as string[]) || [];
-      const agency = (footerResponse.items[0]?.fields?.agency_name as string) || "";
+      const agency = (footerResponse.items[0]?.fields?.agencyName as string) || "";
       const copyright = (footerResponse.items[0]?.fields?.copyright as string) || "";
       const legalinfo = (footerResponse.items[0]?.fields?.legalinfo as string) || "";
-  
       return { about, agency, copyright, legalinfo };
     } catch (error) {
       console.error("Error fetching footer data:", error);
