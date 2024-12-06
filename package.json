@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@types/gsap": "^3.0.0",
     "contentful": "^11.2.3",
     "gsap": "^3.12.5",
