@@ -15683,13 +15683,6 @@ nav {
     position: relative
 }
 
-.heading2 {
-    color: #333;
-    font: 60px/1.1 proxima_nova_altbold;
-    position: relative;
-    z-index: 1
-}
-
 .heading3 {
     color: #000;
     font: 36px/1.1 proxima_nova_altsemibold;
@@ -26021,7 +26014,7 @@ input#contact_phonemuber {
     width: 65%
 }
 
-.common__btn .btn-effect {
+/* .common__btn .btn-effect {
     position: relative;
     font-size: 1rem/2.1 proxima_nova_alt_rgregular;
     border: 1px solid #000;
@@ -26036,12 +26029,12 @@ input#contact_phonemuber {
 .common__btn {
     margin-top: 60px;
     display: table
-}
-
+} */
+/* 
 .common__btn .btn-effect:hover svg {
     -webkit-animation: arrowmove .4s infinite alternate ease-in-out;
     animation: arrowmove .4s infinite alternate ease-in-out
-}
+} */
 
 .nav__list.common__btn {
     margin-top: 0
@@ -26067,7 +26060,7 @@ input#contact_phonemuber {
     }
 }
 
-.common__btn svg {
+/* .common__btn svg {
     right: 18px;
     fill: none;
     stroke-linecap: round;
@@ -26087,7 +26080,7 @@ input#contact_phonemuber {
     -moz-transform: translateX(-5px);
     -ms-transform: translateX(-5px);
     -o-transform: translateX(-5px)
-}
+} */
 
 .bg_story_lft .common__btn svg {
     stroke: #fff
@@ -27936,9 +27929,9 @@ blockquote.para {
         margin-bottom: 40px
     }
 
-    .common__btn {
+    /* .common__btn {
         margin-top: 20px
-    }
+    } */
 
     .cont_port_slider {
         padding: 40px 15px
@@ -29774,7 +29767,6 @@ i.fa.fa-linkedin.fa-fw {
     padding-left: 18%;
     padding-right: 18%
 }
-
 
 @media print {
     @page {
