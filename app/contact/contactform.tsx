@@ -81,7 +81,7 @@
                         </span>
                       </span>
                     </a>
-                    <a href="https://appinventiv.com/career/">
+                    <a href="https://novotek.ai/career/">
                       <span className="text">
                         For Career
                         <span className="arrow">
