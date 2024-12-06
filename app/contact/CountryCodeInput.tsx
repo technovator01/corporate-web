@@ -5,6 +5,7 @@ interface CountryCode {
   code: string;
   name: string;
   dialCode: string;
+  
 }
 
 export interface PhoneNumberDetails {
@@ -33,12 +34,14 @@ interface CountryCodeInputProps {
   onPhoneNumberChange?: (details: PhoneNumberDetails) => void;
   className?: string;
   maxLength?: number;
+  disabled?: boolean;
 }
 
 const CountryCodeInput: React.FC<CountryCodeInputProps> = ({ 
   onPhoneNumberChange, 
   className = "typedtxt",
-  maxLength = 18 
+  maxLength = 10,
+  disabled = false  //
 }) => {
   const [selectedCountry, setSelectedCountry] = useState<CountryCode>(COUNTRY_CODES[0]);
   const [phoneNumber, setPhoneNumber] = useState<string>('');
@@ -71,33 +74,35 @@ const CountryCodeInput: React.FC<CountryCodeInputProps> = ({
 
   return (
     <div className="contact-grid phone-input-container flex items-center">
-      <div className="flex items-center">
-        <select 
-          value={selectedCountry.code} 
-          onChange={handleCountryChange}
-          className="mr-2 p-2 border rounded text-sm"
-        >
-          {COUNTRY_CODES.map((country) => (
-            <option key={country.code} value={country.code}>
-              {country.dialCode} ({country.code})
-            </option>
-          ))}
-        </select>
-        <input 
-          type="tel"
-          value={phoneNumber}
-          onChange={handlePhoneNumberChange}
-          maxLength={maxLength}
-          className={`${className} flex-grow`}
-          name="phone"
-          autoComplete="off"
-          placeholder="Enter Contact"
-        />
-      </div>
-      <label htmlFor="contact_phonemuber" className="sr-only">
-        Contact number
-      </label>
+    <div className="flex items-center">
+      <select 
+        value={selectedCountry.code} 
+        onChange={handleCountryChange}
+        className="mr-2 p-2 border rounded text-sm"
+        disabled={disabled}  // Add disabled prop
+      >
+        {COUNTRY_CODES.map((country) => (
+          <option key={country.code} value={country.code}>
+            {country.dialCode} ({country.code})
+          </option>
+        ))}
+      </select>
+      <input 
+        type="tel"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+        maxLength={maxLength}
+        className={`${className} flex-grow`}
+        name="phone"
+        autoComplete="off"
+        placeholder="Enter Contact"
+        disabled={disabled}  // Add disabled prop
+      />
     </div>
+    <label htmlFor="contact_phonemuber" className="sr-only">
+      Contact number
+    </label>
+  </div>
   );
 };
 
