@@ -79,11 +79,13 @@ export default function Header({ items, logo }: HeaderItems) {
                 </a>
               </li>
             ))}
+            <Link href='/contact'>
             <li className="nav__list common__btn">
-              <a className="contact-btn btn_line btn-effect" href="/contact">
+              <a className="contact-btn btn_line btn-effect">
                 <span>CONTACT US</span>
               </a>
             </li>
+            </Link>
           </ul>
         </nav>
       </div>
@@ -105,7 +107,7 @@ export default function Header({ items, logo }: HeaderItems) {
 </div>
 
      <div className="nav__list common__btn mobile__btn">
-      <a className="btn-effect btn--show-modal" href="">
+      <a className="btn-effect btn--show-modal" href="/contact">
        Contact Us
       </a>
      </div>

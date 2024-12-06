@@ -7,17 +7,17 @@ import CompanyStats from './components/sections/CompanyStats';
 import ThirdSection from './components/sections/ThirdSection';
 import FourthSection, { IndustryItem, TabItem } from './components/sections/FourthSection';
 import CTASection from './components/sections/FifthSection';
-import Recognition from './components/sections/NinthSection';
+// import Recognition from './components/sections/NinthSection';
 import Blogs from './components/sections/TwelthSection';
 import FAQs from './components/sections/Eleventh';
 import {SuccessStoriesWrapper } from './components/sections/SuccessStoriesClientWraper';
-import TestimonialPanel from './components/sections/SeventhSection';
+// import TestimonialPanel from './components/sections/SeventhSection';
 
 export default async function AIServicesPage() {
     const { services,serviceheading,servicesubheading  } = await getData();
     const successStoriesData  = await getSuccessStories();
     const {title, subtitle, cards} = await getAIData();
-    const recognitionsData = await getRecognitions();
+    // const recognitionsData = await getRecognitions();
     const { heading, faqs } = await getFAQ();
     const items = await getIndustries();
     const data= await getIndustryPageData();
