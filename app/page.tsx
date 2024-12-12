@@ -39,10 +39,10 @@ export default async function AIServicesPage() {
                 <FourthSection items={items} data={data}/>
                 <CTASection ctaData={ctaData}/>
                 <Suspense fallback={<SectionLoader />}>
-                    <SuccessStoriesWrapper
+                    {/* <SuccessStoriesWrapper
                         heading={successStoriesData.heading}
                         stories={successStoriesData.stories}
-                    />
+                    /> */}
                 </Suspense>
            {/* <TestimonialPanel
         // heading={sampleData.heading}
@@ -52,7 +52,7 @@ export default async function AIServicesPage() {
         {/* <Recognition {...recognitionsData} /> */}
         {/* <ConsultationForm/> */}
         <FAQs faqs={faqs} heading={heading}/>
-            <Blogs blogData={blogData?.blogItems} blogheading={blogData?.blogheading}/>
+            {/* <Blogs blogData={blogData?.blogItems} blogheading={blogData?.blogheading}/> */}
             </main>
         </div>
     );

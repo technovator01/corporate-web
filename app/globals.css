@@ -30063,7 +30063,8 @@ ul.footer_list {
 }
 
 .faq_gap {
-    margin: 5rem 0
+    margin: 5rem 0;
+    padding-bottom: 3rem;
 }
 
 .faq_grid_panel {

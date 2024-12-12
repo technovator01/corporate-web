@@ -217,7 +217,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
                           </div>
                         </div>
                       </div>
-                      <div className="common__btn hv_blue">
+                      {/* <div className="common__btn hv_blue">
                         <a 
                           className="btn_line btn-effect" 
                           href={story.link} 
@@ -229,7 +229,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ heading, stories }) => 
                             <polyline points="8 1 12 5 8 9"></polyline>
                           </svg>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                     <div 
                       className={`port__rght`}

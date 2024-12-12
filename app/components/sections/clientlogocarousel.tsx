@@ -29,13 +29,13 @@ const ClientLogosCarousel = ({ logoheading, logoUrl }: { logoheading?: string, l
       <div className="trusted_brands horizontal_line text-center">
         {logoheading}
       </div>
-      <div ref={carouselRef} className="client-logo-slider flex">
+      {/* <div ref={carouselRef} className="client-logo-slider flex">
       {logoUrl?.map((logo, index) => (
         <div key={index} className="item">
           <img src={logo}/>
         </div>
       ))}
-    </div>
+    </div> */}
     </div>
   );
 };
