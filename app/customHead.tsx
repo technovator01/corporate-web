@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { HeaderItems } from "./components/layout/header";
 
-const CustomHead = ({ logo }: HeaderItems) => (
+const CustomHead = () => (
   <Head>
     <meta charSet="utf-8" />
     <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
@@ -9,7 +8,9 @@ const CustomHead = ({ logo }: HeaderItems) => (
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
       name="viewport"
     />
-    <link href={logo} rel="icon" sizes="32x32" type="image/ico" />
+    {/* <link href={logo} rel="icon" sizes="32x32" type="image/ico" /> */}
+     {/* Favicon */}
+     <link href='/icon.svg' rel="icon"  sizes="any" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link cross-origin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -43,11 +44,11 @@ const CustomHead = ({ logo }: HeaderItems) => (
     />
     <meta content="https://novotek.ai" property="og:url" />
     <meta content="Novotek" property="og:site_name" />
-    <meta content={logo} property="og:image" />
+    <meta content='/icon.svg' property="og:image" />
     <meta content="1200" property="og:image:width" />
     <meta content="627" property="og:image:height" />
-    <meta content="image/jpeg" property="og:image:type" />
-    <meta content="summary_large_image" name="twitter:card" />
+    {/* <meta content="image/jpeg" property="og:image:type" /> */}
+    <meta content="Empowering businesses with cutting-edge AI and ML solutions to solve complex challenges. Discover how Novotek.ai transforms operations, enhances decision-making, and drives innovation for small and medium-sized enterprises." name="twitter:card" />
     <meta
       content="Novotek.ai | AI-Driven Solutions for Modern Business Challenges"
       name="twitter:title"
@@ -56,7 +57,7 @@ const CustomHead = ({ logo }: HeaderItems) => (
       content="Empowering businesses with cutting-edge AI and ML solutions to solve complex challenges. Discover how Novotek.ai transforms operations, enhances decision-making, and drives innovation for small and medium-sized enterprises."
       name="twitter:description"
     />
-    <meta content={logo} name="twitter:image" />
+    <meta content='/icon.svg' name="twitter:image" />
     <meta content="Est. reading time" name="twitter:label1" />
     <meta content="1 minute" name="twitter:data1" />
     <link href="https://cdn.jsdelivr.net" rel="dns-prefetch" />
@@ -100,10 +101,10 @@ const CustomHead = ({ logo }: HeaderItems) => (
     />
     <link href="https://novotek.ai" lang="en-US" rel="alternate" />
     <link href="https://novotek.ai" lang="x-default" rel="alternate" />
-    <meta
+    {/* <meta
       content="YkowU2JBSGJLSFlkSjJ6ZmUzU05pQT090"
       name="dmca-site-verification"
-    />
+    /> */}
     <link
       href="https://t.visitorqueue.com"
       rel="dns-prefetch"

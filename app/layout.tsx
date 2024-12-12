@@ -59,13 +59,13 @@ export default async function RootLayout({
     };
   return (
     <html lang="en">
+      <CustomHead />
       <body
         className={` ${proximaNovaBold.variable} antialiased`}
       >
-        <CustomHead {...headerItems}/>
         <Header {...headerItems} />;
         {children}
-        <Footer about={data.about} agency={data.agency} copyright={data.copyright} legalinfo={data.legalinfo}/>
+        {/* <Footer about={data.about} agency={data.agency} copyright={data.copyright} legalinfo={data.legalinfo}/> */}
       </body>
     </html>
   );

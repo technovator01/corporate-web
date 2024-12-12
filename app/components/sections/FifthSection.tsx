@@ -25,7 +25,7 @@ const CTASection = ({ctaData}:{ctaData: CTAData}) => {
         <div className="common__btn center hv_blue">
           <a 
             className="btn_line btn-effect btn--show-modal" 
-            href="#" 
+            href="/contact" 
             onClick={(e) => {
               e.preventDefault();
               // ctaData.buttonAction();

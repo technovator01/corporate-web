@@ -17,7 +17,7 @@ export default async function LandingPage() {
           </div>
 
           <div className="common__btn hv_blue">
-            <a href="#" className="btn_line btn-effect btn--show-modal">
+            <a href="/contact" className="btn_line btn-effect btn--show-modal">
               Consult Our AI Experts
             </a>
           </div>

@@ -104,7 +104,7 @@
                     Get all your questions answered by <br className="br-block" />
                     our business development team.
                   </div>
-                  <div className="appi-cta cta_flex">
+                  {/* <div className="appi-cta cta_flex">
                     <a href="#" className="open-modal btn-career">
                       <span className="text">
                         For Business
@@ -169,7 +169,7 @@
                         </span>
                       </span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="proposal__request main__contact">
