@@ -42,7 +42,7 @@ function VideoBanner({ videoUrl }: { videoUrl: string }) {
         className="video-wrapper"
         loop
         muted
-        poster="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/chicago-banner.webp"
+        // poster="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/chicago-banner.webp"
       >
         <source src={videoUrl} type="video/mp4" />
       </video>

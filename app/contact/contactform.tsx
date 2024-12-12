@@ -220,7 +220,7 @@
                 </div>
 
                 {/* Budget Select */}
-                <div className="contact-grid select-grid" id="select_budget">
+                {/* <div className="contact-grid select-grid" id="select_budget">
                   <select 
                     className="typedtxt" 
                     id="contact_budget" 
@@ -236,7 +236,7 @@
                     <option value="$100 - $250K">$100 - $250K</option>
                     <option value="More than $250K">More than $250K</option>
                   </select>
-                </div>
+                </div> */}
 
                 {/* Phone Input */}
                 <CountryCodeInput 

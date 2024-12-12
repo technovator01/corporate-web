@@ -88,7 +88,8 @@ const FourthSection = ({items, data}:{items:any, data:any}) => {
             <img 
               alt="ellipse" 
               className="desktop" 
-              src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/ellipse1.webp"
+              // src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/ellipse1.webp"
+              src="/"
             />
           </div>
           {/* <div className="ellipse2">

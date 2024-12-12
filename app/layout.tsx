@@ -18,6 +18,24 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const proximaNovaBold = localFont({
+  src: [
+    { path: './fonts/ProximaNovaLight.woff2', weight: '200' },
+    { path: './fonts/ProximaNovaLight.woff', weight: '200' },
+    { path: './fonts/ProximaNovaThin.woff2', weight: '300' },
+    { path: './fonts/ProximaNovaThin.woff', weight: '300' },
+    { path: './fonts/ProximaNovaRegular.woff2', weight: '400' },
+    { path: './fonts/ProximaNovaRegular.woff', weight: '400' },
+    { path: './fonts/ProximaNovaSemibold.woff2', weight: '600' },
+    { path: './fonts/ProximaNovaSemibold.woff', weight: '600' },
+    { path: './fonts/ProximaNovaBold.woff2', weight: '700' },
+    { path: './fonts/ProximaNovaBold.woff', weight: '700' },
+    { path: './fonts/ProximaNovaExtrabold.woff2', weight: '800' },
+    { path: './fonts/ProximaNovaExtrabold.woff', weight: '800' },
+  ],
+  display: 'swap',
+  variable: '--font-proxima-nova-bold',
+});
 
 export const metadata: Metadata = {
   title: "Novotek AI",
@@ -42,9 +60,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${proximaNovaBold.variable} antialiased`}
       >
-        <CustomHead/>
+        <CustomHead {...headerItems}/>
         <Header {...headerItems} />;
         {children}
         <Footer about={data.about} agency={data.agency} copyright={data.copyright} legalinfo={data.legalinfo}/>

@@ -77,11 +77,11 @@ const TestimonialPanel: React.FC = () => {
                 <div className="client__left" style={{ width: '30%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <div className="client__left__inner" style={{ textAlign: 'center' }}>
                     <figure className="client-image" style={{ marginBottom: '15px' }}>
-                      <img 
+                      {/* <img 
                         alt="img" 
                         src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Daniel-Yasoshima-client-name.svg" 
                         style={{ maxWidth: '150px', maxHeight: '150px' }}
-                      />
+                      /> */}
                     </figure>
                     <div className="client__name wht" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px' }}>
                       Daniel Yasoshima
@@ -149,11 +149,11 @@ const TestimonialPanel: React.FC = () => {
                 <div className="client__left" style={{ width: '30%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                   <div className="client__left__inner" style={{ textAlign: 'center' }}>
                     <figure className="client-image" style={{ marginBottom: '15px' }}>
-                      <img 
+                      {/* <img 
                         alt="appinventiv client" 
                         src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/Billy-Lan-client-image.svg" 
                         style={{ maxWidth: '150px', maxHeight: '150px' }}
-                      />
+                      /> */}
                     </figure>
                     <div className="client__name wht" style={{ fontWeight: 'bold', fontSize: '18px', marginBottom: '10px' }}>
                       Billy Lan
@@ -215,18 +215,18 @@ const TestimonialPanel: React.FC = () => {
           <div className="owl-item">
             <div className="item">
               <div className="cl_logo">
-                <figure>
+                {/* <figure>
                   <img alt="youcomm appinventiv client logo" loading="lazy" src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/YouCOMM-logo.svg" />
-                </figure>
+                </figure> */}
               </div>
             </div>
           </div>
           <div className="owl-item">
             <div className="item">
               <div className="cl_logo">
-                <figure>
+                {/* <figure>
                   <img alt="jobget appinventiv client logo" loading="lazy" src="https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/jobget-cl.svg" />
-                </figure>
+                </figure> */}
               </div>
             </div>
           </div>

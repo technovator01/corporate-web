@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getFooter } from "../api/getLandingPageData";
+import { FaFacebook } from "react-icons/fa6";
 
 export interface FooterProps {
   about: string[];
@@ -67,7 +68,7 @@ export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legali
       <div className="footer-btm">
         <div className="container">
           <div className="foot_btm_uper flex_wrapper flex_al_center">
-            <figure className="dmca-wrap">
+            {/* <figure className="dmca-wrap">
               <a
                 className="dmca-badge"
                 href="//www.dmca.com/Protection/Status.aspx?ID=243d6934-5044-462a-b87b-75eebc0294b7"
@@ -79,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legali
                   src="https://images.dmca.com/Badges/dmca-badge-w150-2x1-02.png?ID=243d6934-5044-462a-b87b-75eebc0294b7"
                 />
               </a>
-            </figure>
+            </figure> */}
             <div className="full_stack">
               <p>
                 {agency}
@@ -92,15 +93,15 @@ export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legali
                 <a>{legalinfo}</a>
                 <div className="statutory-para">
                   <p>
-                    Appinventiv is the Registered Name of Appinventiv Technologies Pvt. Ltd., a mobile app development
-                    company situated in Noida, U.P. India at the street address - B- 25, Sector 58, Noida, U.P. 201301.
+                    Novotek is the Registered Name of Novotek Technologies Pvt. Ltd., an AI solutions
+                    company situated in Detroit, USA.
                   </p>
                   <p>
                     All the personal information that you submit on the website - (Name, Email, Phone and Project
                     Details) will not be sold, shared or rented to others. Our sales team or the team of mobile app
                     developers only use this information to send updates about our company and projects or contact you
                     if requested or find it necessary. You may opt out of receiving our communication by dropping us an
-                    email on - info@appinventiv.com
+                    email on - novotek.ai
                   </p>
                 </div>
               </div>
@@ -121,7 +122,8 @@ export const Footer: React.FC<FooterProps> = ({ about, agency, copyright, legali
             <ul className="foot_social_network">
               <li className="facebook">
                 <a href="/" target="_blank" rel="nofollow">
-                  <i className="fa-brands fa-facebook-f"></i>
+                  {/* <i className="fa-brands fa-facebook-f"></i> */}
+                  <FaFacebook className="fa-brands fa-facebook-f" />
                 </a>
               </li>
               {/* Add other social links similarly */}

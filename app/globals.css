@@ -19,7 +19,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 img.wp-smiley,
 img.emoji {
@@ -2484,7 +2484,7 @@ a.pp-button-social-login.pp-button-social-login-github {
     border-color: #24292e
 }
 
-a.pp-button-social-login .ppsc-vk {
+/* a.pp-button-social-login .ppsc-vk {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/vk-fa.svg)
 }
 
@@ -2518,7 +2518,7 @@ a.pp-button-social-login .ppsc-linkedin {
 
 a.pp-button-social-login .ppsc-github {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/github-fa.svg)
-}
+} */
 
 #profilepress-myaccount-wrapper,
 #profilepress-myaccount-wrapper *,
@@ -6919,7 +6919,7 @@ a {
 
 .nav__list .contact-btn {
     border: 2px solid #000;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     border-radius: 7px
 }
 
@@ -7399,14 +7399,14 @@ header.white-header .nav__list .contact-btn {
     transform-origin: 0 0
 }
 
-@font-face {
+/* @font-face {
     font-family: FontAwesome;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.eot?v=4.7.0);
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
     font-weight: 400;
     font-style: normal;
     font-display: swap
-}
+} */
 
 .fa {
     display: inline-block;
@@ -7457,7 +7457,7 @@ header.white-header .nav__list .contact-btn {
     font-size: 20px
 }
 
-.foot_social_network li:hover i {
+.foot_social_network li:hover a svg {
     color: #000
 }
 
@@ -14329,14 +14329,14 @@ textarea {
     width: 100%
 }
 
-@font-face {
+/* @font-face {
     font-family: FontAwesome;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.eot?v=4.7.0);
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.woff2?v=4.7.0) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.woff?v=4.7.0) format("woff"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.ttf?v=4.7.0) format("truetype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
     font-weight: 400;
     font-style: normal;
     font-display: swap
-}
+} */
 
 .fa {
     display: inline-block;
@@ -14349,7 +14349,9 @@ textarea {
 
 @font-face {
     font-family: proxima_nova_altbold;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_bold-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaBold.woff2') format('woff2'),
+    url('/fonts/ProximaNovaBold.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -14357,7 +14359,9 @@ textarea {
 
 @font-face {
     font-family: proxima_nova_altthin;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_thin-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaThin.woff2') format('woff2'),
+    url('/fonts/ProximaNovaThin.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -14365,7 +14369,9 @@ textarea {
 
 @font-face {
     font-family: proxima_nova_altlight;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_light-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_light-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_light-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_light-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaLight.woff2') format('woff2'),
+    url('/fonts/ProximaNovaLight.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -14373,7 +14379,9 @@ textarea {
 
 @font-face {
     font-family: proxima_nova_altsemibold;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_semibold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_semibold-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_semibold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_semibold-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaSemibold.woff2') format('woff2'),
+    url('/fonts/ProximaNovaSemibold.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -14381,7 +14389,9 @@ textarea {
 
 @font-face {
     font-family: proxima_nova_alt_rgregular;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/mark_simonson_-_proxima_nova_alt_regular-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaRegular.woff2') format('woff2'),
+    url('/fonts/ProximaNovaRegular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap
@@ -14389,7 +14399,9 @@ textarea {
 
 @font-face {
     font-family: proxima_novaextrabold;
-    src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/proximanova-extrabold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/proximanova-extrabold-webfont.woff) format("woff");
+    /* src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/proximanova-extrabold-webfont.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../fonts/proximanova-extrabold-webfont.woff) format("woff"); */
+    src: url('/fonts/ProximaNovaExtrabold.woff2') format('woff2'),
+    url('/fonts/ProximaNovaExtrabold.woff') format('woff');
     font-weight: 400;
     font-style: normal
 }
@@ -16647,8 +16659,8 @@ nav {
     position: relative;
     z-index: 2;
     background: 0 0;
-    width: 100%;
-    height: 50px;
+    /* width: 100%; */
+    /* height: 50px; */
     border: 0;
     color: #000;
     font-size: 18px;
@@ -17764,38 +17776,38 @@ nav {
     content: "\f0e1"
 }
 
-@font-face {
+/* @font-face {
     font-family: "Font Awesome 5 Brands";
     font-style: normal;
     font-display: swap;
     font-weight: 400;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.eot);
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.woff) format("woff"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.ttf) format("truetype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-brands-400.svg#fontawesome) format("svg")
-}
+} */
 
 .fab {
     font-family: "Font Awesome 5 Brands"
 }
 
-@font-face {
+/* @font-face {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-weight: 400;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.eot);
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.woff) format("woff"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.ttf) format("truetype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-regular-400.svg#fontawesome) format("svg")
-}
+} */
 
 .far {
     font-weight: 400
 }
 
-@font-face {
+/* @font-face {
     font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-weight: 900;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.eot);
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.woff) format("woff"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.ttf) format("truetype"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../webfonts/fa-solid-900.svg#fontawesome) format("svg")
-}
+} */
 
 .fa,
 .far,
@@ -20027,7 +20039,7 @@ img {
 .menu-wrapper>ul>li>a {
     position: relative;
     font-size: 15px;
-    padding: 20px 18px;
+    /* padding: 20px 18px; */
     text-transform: uppercase;
     color: #fff;
     display: block;
@@ -21079,7 +21091,7 @@ header {
     color: #fff;
     background-color: #126bfb;
     font-weight: 600;
-    padding: 12px 35px;
+    /* padding: 12px 35px; */
     border: 1px solid #fff;
     border-radius: 8px
 }
@@ -24202,13 +24214,13 @@ header {
     --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free'
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
     font-weight: 900;
     font-display: block;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-solid-900.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-solid-900.ttf) format("truetype")
-}
+} */
 
 .fas,
 .fa-solid {
@@ -24771,13 +24783,14 @@ br.br-block {
 .contact-grid.full-grid.grid-textarea {
     background: #f2f2f2;
     margin-top: 20px;
-    width: calc(100% - 30px);
-    border-bottom: 0;
-    margin-bottom: 20px
+    /* width: 100%; */
+    /* width: calc(100% - 30px); */
+    /* border-bottom: 0; */
+    margin-bottom: 20px;
 }
 
 .contact-grid.full-grid {
-    width: calc(100% - 30px)
+    width: calc(100% - 30px);
 }
 
 .contact-grid .col {
@@ -36378,7 +36391,7 @@ header {
     color: #fff;
     background-color: #126bfb;
     font-weight: 600;
-    padding: 12px 35px;
+    /* padding: 12px 35px; */
     border: 1px solid #fff;
     border-radius: 8px
 }
@@ -37377,13 +37390,13 @@ header {
     --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands'
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Font Awesome 6 Brands';
     font-style: normal;
     font-weight: 400;
     font-display: block;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-brands-400.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-brands-400.ttf) format("truetype")
-}
+} */
 
 .fab,
 .fa-brands {
@@ -39501,13 +39514,13 @@ header {
     --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free'
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Font Awesome 6 Free';
     font-style: normal;
     font-weight: 900;
     font-display: block;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-solid-900.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-solid-900.ttf) format("truetype")
-}
+} */
 
 .fas,
 .fa-solid {

@@ -1,6 +1,7 @@
-import Head from 'next/head';
+import Head from "next/head";
+import { HeaderItems } from "./components/layout/header";
 
-const CustomHead = () => (
+const CustomHead = ({ logo }: HeaderItems) => (
   <Head>
     <meta charSet="utf-8" />
     <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
@@ -8,12 +9,7 @@ const CustomHead = () => (
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
       name="viewport"
     />
-    <link
-      href="https://appinventiv.com/wp-content/themes/twentynineteen-child/images/favicon.ico"
-      rel="icon"
-      sizes="32x32"
-      type="image/ico"
-    />
+    <link href={logo} rel="icon" sizes="32x32" type="image/ico" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link cross-origin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -29,57 +25,45 @@ const CustomHead = () => (
       />
     </noscript>
     <meta content="max-image-preview:large, index, follow" name="robots" />
-    <link
-      href="https://appinventiv.com/wp-content/cache/autoptimize/css/autoptimize_5d20ca7145de6bde95e422c22abf22eb.css"
-      media="all"
-      rel="stylesheet"
-    />
-    <link
-      href="https://appinventiv.com/wp-content/cache/autoptimize/css/autoptimize_3950ef1953883cc46c12ed28870e6767.css"
-      media="print"
-      rel="stylesheet"
-    />
-    <title>AI Development Services - AI Development Company</title>
+    <title>Novotek.ai | AI-Driven Solutions for Modern Business Challenges</title>
     <meta
-      content="A trusted AI development company, Leverage our custom AI development services capable of automating mundane processes and scaling businesses."
+      content="Empowering businesses with cutting-edge AI and ML solutions to solve complex challenges. Discover how Novotek.ai transforms operations, enhances decision-making, and drives innovation for small and medium-sized enterprises."
       name="description"
     />
-    <link href="https://appinventiv.com/ai-development-services/" rel="canonical" />
+    <link href="https://novotek.ai" rel="canonical" />
     <meta content="en_US" property="og:locale" />
     <meta content="services" property="og:type" />
-    <meta content="AI Development Services - AI Development Company" property="og:title" />
     <meta
-      content="A trusted AI development company, Leverage our custom AI development services capable of automating mundane processes and scaling businesses."
+      content="Novotek.ai | AI-Driven Solutions for Modern Business Challenges"
+      property="og:title"
+    />
+    <meta
+      content="Empowering businesses with cutting-edge AI and ML solutions to solve complex challenges. Discover how Novotek.ai transforms operations, enhances decision-making, and drives innovation for small and medium-sized enterprises."
       property="og:description"
     />
-    <meta content="https://appinventiv.com/ai-development-services/" property="og:url" />
-    <meta content="Appinventiv" property="og:site_name" />
-    <meta content="2024-07-29T13:52:32+00:00" property="article:modified_time" />
-    <meta
-      content="https://appinventiv.com/wp-content/uploads/2021/07/ai-software-developement.jpg"
-      property="og:image"
-    />
+    <meta content="https://novotek.ai" property="og:url" />
+    <meta content="Novotek" property="og:site_name" />
+    <meta content={logo} property="og:image" />
     <meta content="1200" property="og:image:width" />
     <meta content="627" property="og:image:height" />
     <meta content="image/jpeg" property="og:image:type" />
     <meta content="summary_large_image" name="twitter:card" />
-    <meta content="AI Development Services - AI Development Company" name="twitter:title" />
     <meta
-      content="A trusted AI development company, Leverage our custom AI development services capable of automating mundane processes and scaling businesses."
+      content="Novotek.ai | AI-Driven Solutions for Modern Business Challenges"
+      name="twitter:title"
+    />
+    <meta
+      content="Empowering businesses with cutting-edge AI and ML solutions to solve complex challenges. Discover how Novotek.ai transforms operations, enhances decision-making, and drives innovation for small and medium-sized enterprises."
       name="twitter:description"
     />
-    <meta
-      content="https://appinventiv.com/wp-content/uploads/2021/07/ai-software-developement.jpg"
-      name="twitter:image"
-    />
+    <meta content={logo} name="twitter:image" />
     <meta content="Est. reading time" name="twitter:label1" />
     <meta content="1 minute" name="twitter:data1" />
     <link href="https://cdn.jsdelivr.net" rel="dns-prefetch" />
-    <link href="https://appinventiv.com/feed/" rel="alternate" title="Appinventiv &raquo; Feed" type="application/rss+xml" />
     <link
-      href="https://appinventiv.com/comments/feed/"
+      href="https://novotek.ai"
       rel="alternate"
-      title="Appinventiv &raquo; Comments Feed"
+      title="NovotekAI &raquo; Feed"
       type="application/rss+xml"
     />
     <link
@@ -88,33 +72,43 @@ const CustomHead = () => (
       media="all"
       rel="stylesheet"
     />
-    <script id="jquery-core-js" src="https://appinventiv.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
-    <link href="https://appinventiv.com/wp-json/" rel="https://api.w.org/" />
-    <link href="https://appinventiv.com/wp-json/wp/v2/pages/29238" rel="alternate" title="JSON" type="application/json" />
-    <link href="https://appinventiv.com/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml" />
-    <meta content="WordPress 6.7" name="generator" />
-    <link href="https://appinventiv.com/?p=29238" rel="shortlink" />
     <link
-      href="https://appinventiv.com/wp-json/oembed/1.0/embed?url=https://appinventiv.com/ai-development-services/"
+      href="https://novotek.ai"
+      rel="alternate"
+      title="JSON"
+      type="application/json"
+    />
+    <link
+      href="https://novotek.ai"
+      rel="EditURI"
+      title="RSD"
+      type="application/rsd+xml"
+    />
+    <meta content="WordPress 6.7" name="generator" />
+    <link href="https://novotek.ai" rel="shortlink" />
+    <link
+      href="https://novotek.ai"
       rel="alternate"
       title="oEmbed (JSON)"
       type="application/json+oembed"
     />
     <link
-      href="https://appinventiv.com/wp-json/oembed/1.0/embed?url=https://appinventiv.com/ai-development-services/&amp;format=xml"
+      href="https://novotek.ai"
       rel="alternate"
       title="oEmbed (XML)"
       type="text/xml+oembed"
     />
-    <script type="text/javascript">
-      var ajaxurl = "https://appinventiv.com/wp-admin/admin-ajax.php";
-      var domainurl = "https://appinventiv.com";
-      var imagepath = "https://appinventiv.com/wp-content/themes/twentynineteen-child";
-    </script>
-    <link href="https://appinventiv.com/ai-development-services/"  lang="en-US" rel="alternate" />
-    <link href="https://appinventiv.com/ai-development-services/"  lang="x-default" rel="alternate" />
-    <meta content="YkowU2JBSGJLSFlkSjJ6ZmUzU05pQT090" name="dmca-site-verification" />
-    <link href="https://t.visitorqueue.com" rel="dns-prefetch" style={{ display: "none !important" }} />
+    <link href="https://novotek.ai" lang="en-US" rel="alternate" />
+    <link href="https://novotek.ai" lang="x-default" rel="alternate" />
+    <meta
+      content="YkowU2JBSGJLSFlkSjJ6ZmUzU05pQT090"
+      name="dmca-site-verification"
+    />
+    <link
+      href="https://t.visitorqueue.com"
+      rel="dns-prefetch"
+      style={{ display: "none !important" }}
+    />
   </Head>
 );
 

@@ -45,7 +45,7 @@ export default function Header({ items, logo }: HeaderItems) {
       <div className="ds_flex flex_spc_btw flex_al_center">
         {/* Brand Logo Section */}
         <div className="brand_logo">
-          <Link href="https://novotek.ai">
+          <Link href="/">
             <Image
               src={logo}
               alt="Novotek logo"
@@ -79,7 +79,7 @@ export default function Header({ items, logo }: HeaderItems) {
                 </a>
               </li>
             ))}
-            <Link href='/contact'>
+            <Link href='/contact' legacyBehavior>
             <li className="nav__list common__btn">
               <a className="contact-btn btn_line btn-effect">
                 <span>CONTACT US</span>
@@ -96,7 +96,7 @@ export default function Header({ items, logo }: HeaderItems) {
     <div className="mobile-logo">
   <a href="/">
     <img 
-      alt="Appinventiv - logo" 
+      alt="Novotek - logo" 
       className="appinventiv-mob-wht-logo" 
       // src="https://images.ctfassets.net/w6j98252myfo/jwtFyLQ4P5gGhbl2YPswu/53893b8b568001d1bd159511ec8c025f/Novotek_White.png" 
         src={logo}
