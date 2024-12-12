@@ -124,7 +124,7 @@ export default function Header({ items, logo }: HeaderItems) {
     <div className="mobile-logo">
   <a href="/">
     <img 
-      alt="Appinventiv - logo" 
+      alt="Novotek - logo" 
       className="appinventiv-mob-wht-logo" 
       src={logo}
       width="50" 
