@@ -26,10 +26,10 @@ const CTASection = ({ctaData}:{ctaData: CTAData}) => {
           <a 
             className="btn_line btn-effect btn--show-modal" 
             href="/contact" 
-            onClick={(e) => {
-              e.preventDefault();
-              // ctaData.buttonAction();
-            }}
+            // onClick={(e) => {
+            //   e.preventDefault();
+            //   // ctaData.buttonAction();
+            // }}
           >
             <span>
               {ctaData.buttonText}
