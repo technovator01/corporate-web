@@ -2061,12 +2061,12 @@ table.ppress-details-table {
     font-size: 14px
 }
 
-@font-face {
+/* @font-face {
     font-family: "Material Icons";
     font-style: normal;
     font-weight: 400;
     src: local("Material Icons"), local("MaterialIcons-Regular"), url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/./material-icons/MaterialIcons-Regular.woff2)format("woff2"), url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/./material-icons/MaterialIcons-Regular.woff)format("woff")
-}
+} */
 
 #profilepress-myaccount-wrapper .ppmyac-icons,
 .pp-form-field-wrap .pp-form-material-icons,
@@ -2286,7 +2286,7 @@ table.ppress-details-table {
 }
 
 .pp-form-wrapper select {
-    background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/frontend/arrow-down.png) !important;
+    /* background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/frontend/arrow-down.png) !important; */
     background-position: right 20px center !important;
     background-repeat: no-repeat !important;
     background-size: 10px auto !important;
@@ -2429,10 +2429,10 @@ a.pp-button-social-login span.ppsc-text {
     padding: .5em;
     color: #fff !important
 }
-
+/* 
 a.pp-button-social-login .ppsc-google {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/google.svg)
-}
+} */
 
 a.pp-button-social-login.pp-button-social-login-google {
     background: #4285f4;
@@ -6137,7 +6137,7 @@ span.flatpickr-weekday {
     top: 50%;
     margin-left: -40px;
     margin-top: -40px;
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/plugins/owl.video.play.png) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/plugins/owl.video.play.png) no-repeat; */
     cursor: pointer;
     z-index: 1;
     -webkit-backface-visibility: hidden;
@@ -7559,7 +7559,7 @@ header.white-header .nav__list .contact-btn {
 .app_form_left {
     width: 400px;
     padding: 50px 50px 20px;
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/popup_bg_new.webp);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/popup_bg_new.webp); */
     background-repeat: no-repeat;
     background-size: cover;
     border-top-left-radius: 15px;
@@ -7910,7 +7910,7 @@ header.white-header .nav__list .contact-btn {
 }
 
 .headq__wrapper {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/footer-hq-bg.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/footer-hq-bg.webp) no-repeat; */
     background-size: cover;
     background-position: center;
     border-top: 6px solid #1163fb;
@@ -10124,12 +10124,12 @@ table.ppress-details-table {
     font-size: 14px
 }
 
-@font-face {
+/* @font-face {
     font-family: "Material Icons";
     font-style: normal;
     font-weight: 400;
     src: local("Material Icons"), local("MaterialIcons-Regular"), url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/./material-icons/MaterialIcons-Regular.woff2)format("woff2"), url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/./material-icons/MaterialIcons-Regular.woff)format("woff")
-}
+} */
 
 #profilepress-myaccount-wrapper .ppmyac-icons,
 .pp-form-field-wrap .pp-form-material-icons,
@@ -10349,7 +10349,7 @@ table.ppress-details-table {
 }
 
 .pp-form-wrapper select {
-    background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/frontend/arrow-down.png) !important;
+    /* background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/frontend/arrow-down.png) !important; */
     background-position: right 20px center !important;
     background-repeat: no-repeat !important;
     background-size: 10px auto !important;
@@ -10493,9 +10493,9 @@ a.pp-button-social-login span.ppsc-text {
     color: #fff !important
 }
 
-a.pp-button-social-login .ppsc-google {
+/* a.pp-button-social-login .ppsc-google {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/google.svg)
-}
+} */
 
 a.pp-button-social-login.pp-button-social-login-google {
     background: #4285f4;
@@ -10547,7 +10547,7 @@ a.pp-button-social-login.pp-button-social-login-github {
     border-color: #24292e
 }
 
-a.pp-button-social-login .ppsc-vk {
+/* a.pp-button-social-login .ppsc-vk {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/vk-fa.svg)
 }
 
@@ -10581,7 +10581,7 @@ a.pp-button-social-login .ppsc-linkedin {
 
 a.pp-button-social-login .ppsc-github {
     background-image: url(//appinventiv.com/wp-content/plugins/wp-user-avatar/assets/css/../images/social-login/github-fa.svg)
-}
+} */
 
 #profilepress-myaccount-wrapper,
 #profilepress-myaccount-wrapper *,
@@ -16708,7 +16708,7 @@ nav {
 }
 
 .pop-left {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/vision-img.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/vision-img.webp) no-repeat; */
     width: 553px;
     padding: 55px 50px;
     position: relative;
@@ -16835,7 +16835,7 @@ nav {
 }
 
 .p_wrapper_logos span {
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/popup-logo-sprite.png);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/popup-logo-sprite.png); */
     background-repeat: no-repeat;
     display: block
 }
@@ -17067,7 +17067,7 @@ nav {
     -webkit-transition: .3s ease-in-out all;
     -moz-transition: .3s ease-in-out all;
     -o-transition: .3s ease-in-out all;
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/magnifying-glass.svg);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/magnifying-glass.svg); */
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 0 13px;
@@ -17411,7 +17411,7 @@ nav {
 }
 
 .dropdown-inner .left_icon_wrapper>figure>span {
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/header-icons-05.webp);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/header-icons-05.webp); */
     display: block
 }
 
@@ -17712,7 +17712,7 @@ nav {
 .ic-star {
     width: 41px;
     height: 36px;
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/Team-01.webp);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/Team-01.webp); */
     background-position: -38px 120px
 }
 
@@ -17829,7 +17829,7 @@ img {
 }
 
 .left_sec .pop-left {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/contact_cta.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/contact_cta.webp) no-repeat; */
     width: 563px;
     height: 580px;
     padding: 75px 65px;
@@ -18056,7 +18056,7 @@ img {
 }
 
 .case__cta {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/case_cta.png) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/case_cta.png) no-repeat; */
     height: 528px;
     display: flex;
     color: #fff;
@@ -18065,7 +18065,7 @@ img {
 }
 
 .case__cta2 {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/case_cta2.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/case_cta2.webp) no-repeat; */
     height: 528px;
     display: flex;
     color: #fff;
@@ -18107,7 +18107,7 @@ img {
 
 .summit_cta {
     display: none;
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/summit-banner-2023.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../images/summit-banner-2023.webp) no-repeat; */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -22090,13 +22090,13 @@ header {
     --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands'
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Font Awesome 6 Brands';
     font-style: normal;
     font-weight: 400;
     font-display: block;
     src: url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-brands-400.woff2) format("woff2"), url(//appinventiv.com/wp-content/themes/twentynineteen-child/font-awesome/css/../webfonts/fa-brands-400.ttf) format("truetype")
-}
+} */
 
 .fab,
 .fa-brands {
@@ -24483,7 +24483,8 @@ body {
 }
 
 .top_bl_bg {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/contact-bg-banner-desktop.webp)no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/contact-bg-banner-desktop.webp)no-repeat; */
+    background: url(/contact-bg-banner-desktop.webp) no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -24688,7 +24689,7 @@ br.br-block {
 }
 
 .select-grid .selectric .button {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/blue_drop.webp)no-repeat !important;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/blue_drop.webp)no-repeat !important; */
     right: -20px !important;
     top: 12px
 }
@@ -24919,7 +24920,7 @@ br.br-block {
     left: 80px;
     top: 0;
     content: "";
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/clients_speaks_quote_icn2.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/clients_speaks_quote_icn2.webp) no-repeat; */
     height: 85px;
     width: 85px;
     background-size: 85px
@@ -27689,7 +27690,7 @@ blockquote.para {
     }
 
     .p_wrapper_logos .mobile-sprite {
-        background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/popup-logo-sprite-mobile.webp);
+        /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../images/popup-logo-sprite-mobile.webp); */
         background-repeat: no-repeat;
         display: block;
         height: 50px;
@@ -29541,7 +29542,7 @@ blockquote.para {
 .iti__flag {
     height: 15px;
     box-shadow: 0 0 1px 0 #888;
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/flags.webp);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/flags.webp); */
     background-repeat: no-repeat;
     background-color: #dbdbdb;
     background-position: 20px 0
@@ -29550,7 +29551,7 @@ blockquote.para {
 @media (-webkit-min-device-pixel-ratio:2),
 (min-resolution:192dpi) {
     .iti__flag {
-        background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/flags@2x.webp)
+        /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/flags@2x.webp) */
     }
 }
 
@@ -29559,11 +29560,11 @@ blockquote.para {
 }
 
 /*
-Theme Name: Appinventiv
-Theme URI: https://appinventiv.com
+Theme Name: Novotek
+Theme URI: https://novotek.ai
 Template: twentynineteen
-Author: the Appinventiv team
-Author URI: https://appinventiv.com
+Author: the Novotek team
+Author URI: https://https://novotek.ai
 Description: Our theme is designed to show off the power of the block editor. It features custom styles for all the default blocks, and is built so that what you see in the editor looks like what you'll see on your website. It is designed to be adaptable to a wide range of websites, whether you’re running a photo blog, launching a new business, or supporting a non-profit. Featuring ample whitespace and modern sans-serif headlines paired with classic serif body text, it's built to be beautiful on all screen sizes.
 Tags: one-column,flexible-header,accessibility-ready,custom-colors,custom-menu,custom-logo,editor-style,featured-images,footer-widgets,rtl-language-support,sticky-post,threaded-comments,translation-ready
 Version: 1.4.1565598788
@@ -31128,7 +31129,7 @@ input[type=number] {
 }
 
 .app_form_panel {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/talk-to-us-banner.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/talk-to-us-banner.webp) no-repeat; */
     background-size: cover;
     position: relative;
     padding: 6rem 0
@@ -31336,7 +31337,7 @@ input[type=number] {
 }
 
 .select-grid .selectric .button {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/select-arrow-wht.svg) no-repeat !important;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/select-arrow-wht.svg) no-repeat !important; */
     right: -20px !important;
     top: 12px
 }
@@ -31924,7 +31925,7 @@ input[type=number] {
     .app_form_panel {
         padding: 4rem 0;
         margin: 2rem 0;
-        background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/bg-mobile-form.webp) no-repeat;
+        /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/common/../../new-images/bg-mobile-form.webp) no-repeat; */
         background-size: cover;
         background-position: center
     }
@@ -32393,7 +32394,7 @@ input[type=number] {
 }
 
 .bg_lines {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/bg-liness.webp)no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/bg-liness.webp)no-repeat; */
     background-size: 100%;
     height: 1200px;
     width: 100%;
@@ -33027,7 +33028,7 @@ input[type=number] {
 .cl_testimonial_panel {
     padding: 8rem 0;
     margin-top: -1px;
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/testimonial-bg-img.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/testimonial-bg-img.webp) no-repeat; */
     background-position: center;
     background-size: cover
 }
@@ -33359,25 +33360,25 @@ input[type=number] {
 }
 
 .img1 {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/jobget-banner.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/jobget-banner.webp) no-repeat; */
     background-position: center;
     background-size: cover
 }
 
 .img2 {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/mudrafinal-banner.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/mudrafinal-banner.webp) no-repeat; */
     background-position: center;
     background-size: cover
 }
 
 .img3 {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/vyrb-banner.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/vyrb-banner.webp) no-repeat; */
     background-position: center;
     background-size: cover
 }
 
 .img4 {
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/youcomm-banner.webp) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/youcomm-banner.webp) no-repeat; */
     background-position: center;
     background-size: cover
 }
@@ -33445,11 +33446,11 @@ input[type=number] {
 
 .has-buttons .owl-nav button.owl-prev {
     margin-right: 22px;
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/prev-icon.svg) !important
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/prev-icon.svg) !important */
 }
 
 .has-buttons .owl-nav button.owl-next {
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/next-icon.svg) !important
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/next-icon.svg) !important */
 }
 
 .has-buttons .owl-nav .disabled {
@@ -34786,7 +34787,8 @@ input[type=number] {
     }
 
     .tab-accordion-header .serv_card_head:before {
-        background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/mobile-arrow.svg);
+        /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/../new-images/mobile-arrow.svg); */
+        background-image: url(/mobile-arrow.svg);
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: calc(100% - 10px);
@@ -39541,7 +39543,8 @@ header {
 }
 
 .exit_modalnew .app_form_left {
-    background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/exit-modalbg.webp);
+    /* background-image: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/exit-modalbg.webp); */
+    background-image: url(/exit-modalbg.webp);
     background-position: center;
     border-radius: 8px;
     padding: 35px 35px 30px
@@ -39625,7 +39628,8 @@ header {
 .tip.before-leave:before {
     position: absolute;
     content: "";
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/tip.svg) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/tip.svg) no-repeat; */
+    background: url(/tip.svg) no-repeat;
     width: 40px;
     height: 21px;
     left: 0;
@@ -39663,7 +39667,7 @@ header {
 .expert_list li:before {
     position: absolute;
     content: "";
-    background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/expert-list.svg) no-repeat;
+    /* background: url(//appinventiv.com/wp-content/themes/twentynineteen-child/css/pages/../../new-images/expert-list.svg) no-repeat; */
     width: 13px;
     height: 13px;
     left: 0
