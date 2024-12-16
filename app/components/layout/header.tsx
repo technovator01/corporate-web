@@ -154,7 +154,7 @@ export default function Header({ items, logo }: HeaderItems) {
          <a className="ad-page jmp-to-form" href="/contact">
           Schedule a call
          </a>
-         <a href="/">
+         <a href="/contact">
           contact us
          </a>
         </li>
