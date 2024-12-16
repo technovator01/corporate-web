@@ -19264,7 +19264,7 @@ img {
     .accord-wrap span:after {
         content: "+";
         padding: 0;
-        color: #555;
+        color: #fff;
         position: absolute;
         right: 0;
         font-size: 28px;
@@ -19275,7 +19275,7 @@ img {
     .main-nav li.active span:after {
         content: "–";
         font-size: 24px;
-        color: #0092ff
+        color: #fff
     }
 
     .toggle-menu span:before {
@@ -19302,7 +19302,7 @@ img {
     .accord-wrap a,
     .accord-wrap a:not([href]):not([tabindex]) {
         font-size: 20px;
-        color: #555;
+        color: #fff;
         display: block;
         width: 90%;
         margin: 0
@@ -19370,7 +19370,7 @@ img {
 
     .accord-wrap a:active,
     .accord-wrap a:hover {
-        color: #007bff
+        color: #fff
     }
 
     .imgdesktp {
@@ -21557,7 +21557,7 @@ header {
     }
 
     #mobile-menu .main-nav>ul>li {
-        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
         padding: 0 0 20px !important;
         margin-bottom: 20px
     }
@@ -21596,7 +21596,7 @@ header {
     .accord-wrap span:after {
         content: "+";
         padding: 0;
-        color: #555;
+        color: #fff;
         position: absolute;
         right: 0;
         font-size: 28px;
@@ -21607,7 +21607,7 @@ header {
     .main-nav li.active span:after {
         content: "-";
         font-size: 24px;
-        color: #0092ff
+        color: #fff
     }
 
     .toggle-menu span:before {
@@ -21643,7 +21643,7 @@ header {
     .accord-wrap a,
     .accord-wrap a:not([href]):not([tabindex]) {
         font-size: calc(20px + 12*((100vw - 360px)/767));
-        color: #555;
+        color: #fff;
         display: block;
         width: 90%;
         margin: 0
@@ -21715,7 +21715,7 @@ header {
     }
 
     .mobile-menu .main-nav li.active .accord-wrap a {
-        color: #1468fb
+        color: #fff
     }
 
     .head__panel .heading5 a {
@@ -27072,14 +27072,14 @@ blockquote.para {
     }
 
     .main-nav .lg_size .inside_list .abt-list a {
-        color: grey;
+        color: white;
         font-size: 16px
     }
-
+/*  main-nav */
     .main-nav>ul>li>a {
         font-family: proxima_nova_alt_rgregular;
         font-size: 18px;
-        color: #333;
+        color: #fff;
         padding: 8px 25px;
         display: block
     }
@@ -27790,7 +27790,7 @@ blockquote.para {
     .accord-wrap span:after {
         content: "+";
         padding: 0;
-        color: #555;
+        color: #fff;
         position: absolute;
         right: 0;
         font-size: 28px;
@@ -27801,7 +27801,7 @@ blockquote.para {
     .main-nav li.active span:after {
         content: "–";
         font-size: 24px;
-        color: #0092ff
+        color: #fff
     }
 
     .toggle-menu span:before {
@@ -27832,7 +27832,7 @@ blockquote.para {
     .accord-wrap a,
     .accord-wrap a:not([href]):not([tabindex]) {
         font-size: calc(20px + 12*((100vw - 360px)/767));
-        color: #555;
+        color: #fff;
         display: block;
         width: 90%;
         margin: 0
@@ -27898,7 +27898,7 @@ blockquote.para {
 
     .accord-wrap a:hover,
     .accord-wrap a:active {
-        color: #007bff
+        color: #fff
     }
 
     .imgdesktp {
@@ -36665,7 +36665,7 @@ header {
     }
 
     #mobile-menu {
-        background: #fff;
+        background: #000;
         height: 100%;
         right: -300px;
         overflow: scroll;
@@ -36860,7 +36860,7 @@ header {
     }
 
     #mobile-menu .main-nav>ul>li {
-        border-bottom: 1px solid rgba(0, 0, 0, .3);
+        border-bottom: 1px solid rgba(255, 255, 255, .3);
         padding: 0 0 20px !important;
         margin-bottom: 20px
     }
@@ -36899,7 +36899,7 @@ header {
     .accord-wrap span:after {
         content: "+";
         padding: 0;
-        color: #555;
+        color: #fff;
         position: absolute;
         right: 0;
         font-size: 28px;
@@ -36910,7 +36910,7 @@ header {
     .main-nav li.active span:after {
         content: "-";
         font-size: 24px;
-        color: #0092ff
+        color: #fff
     }
 
     .toggle-menu span:before {
@@ -36924,7 +36924,7 @@ header {
 
     .toggle-menu.active span:before,
     .toggle-menu.active span:after {
-        background-color: #000
+        background-color: #fff
     }
 
     .accordion-content {
@@ -36946,7 +36946,7 @@ header {
     .accord-wrap a,
     .accord-wrap a:not([href]):not([tabindex]) {
         font-size: calc(20px + 12*((100vw - 360px)/767));
-        color: #555;
+        color: #fff;
         display: block;
         width: 90%;
         margin: 0
@@ -37018,7 +37018,7 @@ header {
     }
 
     .mobile-menu .main-nav li.active .accord-wrap a {
-        color: #1468fb
+        color: #fff
     }
 
     .head__panel .heading5 a {

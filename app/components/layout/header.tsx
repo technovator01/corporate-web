@@ -40,7 +40,6 @@ export default function Header({ items, logo }: HeaderItems) {
     }
   }, [isMenuOpen]);
 
-  console.log(logo, "LOGO")
   return (
     <header className="header-container header-new nav-down" style={{ backgroundColor: 'black' }} id="header">
     <div className="container">
