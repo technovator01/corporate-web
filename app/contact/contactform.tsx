@@ -3,6 +3,9 @@
   import CountryCodeInput, { PhoneNumberDetails } from './CountryCodeInput';
   import emailjs from '@emailjs/browser';
 
+  const SERVICE_ID='service_earnofs';
+  const TEMPLATE_ID='template_owfr0io';
+  const PUBLIC_KEY='MNUCYA6SaH4xwOKwA';
   const ContactForm: React.FC = () => {
 
     const form = useRef<HTMLFormElement>(null);
@@ -40,12 +43,11 @@
   
       if (form.current) {
         emailjs
-          .sendForm('service_earnofs', 'template_owfr0io', form.current, {
-            publicKey: 'MNUCYA6SaH4xwOKwA',
+          .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+            publicKey: PUBLIC_KEY,
           })
           .then(
             () => {
-              console.log('SUCCESS!');
               setIsLoading(false);
               setIsSubmitted(true);
               
@@ -104,72 +106,6 @@
                     Get all your questions answered by <br className="br-block" />
                     our business development team.
                   </div>
-                  {/* <div className="appi-cta cta_flex">
-                    <a href="#" className="open-modal btn-career">
-                      <span className="text">
-                        For Business
-                        <span className="arrow">
-                          <i>
-                            <span>→</span>
-                          </i>
-                          <svg
-                            className="arrow-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                          >
-                            <g
-                              fill="none"
-                              stroke="#fff"
-                              strokeWidth="2"
-                              strokeLinejoin="round"
-                              strokeMiterlimit="10"
-                            >
-                              <circle
-                                className="arrow-icon--circle"
-                                cx="16"
-                                cy="16"
-                                r="15.12"
-                              ></circle>
-                            </g>
-                          </svg>
-                        </span>
-                      </span>
-                    </a>
-                    <a href="https://novotek.ai/career/">
-                      <span className="text">
-                        For Career
-                        <span className="arrow">
-                          <i>
-                            <span>→</span>
-                          </i>
-                          <svg
-                            className="arrow-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 32 32"
-                          >
-                            <g
-                              fill="none"
-                              stroke="#0092ff"
-                              strokeWidth="2"
-                              strokeLinejoin="round"
-                              strokeMiterlimit="10"
-                            >
-                              <circle
-                                className="arrow-icon--circle"
-                                cx="16"
-                                cy="16"
-                                r="15.12"
-                              ></circle>
-                            </g>
-                          </svg>
-                        </span>
-                      </span>
-                    </a>
-                  </div> */}
                 </div>
               </div>
               <div className="proposal__request main__contact">
@@ -189,8 +125,8 @@
                     onChange={handleInputChange}
                     disabled={isLoading}
                   />
-                  <label 
-                    htmlFor="contact_fname" 
+                  <label
+                    htmlFor="contact_fname"
                     className={formValues.name ? 'active' : ''}
                   >
                     Name
@@ -212,32 +148,12 @@
                     disabled={isLoading}
                   />
                   <label 
-                    htmlFor="contact_email" 
+                    htmlFor="contact_email"
                     className={formValues.email ? 'active' : ''}
                   >
                     Work Email
                   </label>
                 </div>
-
-                {/* Budget Select */}
-                {/* <div className="contact-grid select-grid" id="select_budget">
-                  <select 
-                    className="typedtxt" 
-                    id="contact_budget" 
-                    name="contact_budget"
-                    disabled={isLoading}
-                  >
-                    <option value="" selected>
-                      Select a Budget Range
-                    </option>
-                    <option value="Still Evaluating">Still Evaluating</option>
-                    <option value="Less than $50K">Less than $50K</option>
-                    <option value="$50K - $100K">$50K - $100K</option>
-                    <option value="$100 - $250K">$100 - $250K</option>
-                    <option value="More than $250K">More than $250K</option>
-                  </select>
-                </div> */}
-
                 {/* Phone Input */}
                 <CountryCodeInput 
                   onPhoneNumberChange={handlePhoneChange} 
@@ -370,6 +286,3 @@
 };
 
   export default ContactForm;
-// template_ymkjmpp
-// service_earnofs
-// MNUCYA6SaH4xwOKwA

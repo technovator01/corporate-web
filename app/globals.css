@@ -26433,7 +26433,7 @@ blockquote.para {
 
     .contact-grid input {
         height: 46px;
-        padding: 10px 15px
+        padding: 5px 12px
     }
 
     .contact-grid textarea {
@@ -32006,9 +32006,6 @@ input[type=number] {
     }
 
     .contact-grid input,
-    .contact-grid textarea {
-        height: 25px
-    }
 
     .pop-right .contact-grid>label {
         top: 18px
